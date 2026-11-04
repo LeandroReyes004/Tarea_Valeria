@@ -1,539 +1,358 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Provincia de Los Ríos | Ecuador</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Kaushan+Script&family=Caveat:wght@500;700&family=Special+Elite&display=swap">
-<style>
-
-:root{--green:#176b55;--deep:#103f36;--mint:#e7f4ee;--gold:#e7b85c;--ink:#24332e;--muted:#687872;--paper:#fffdf8}
-*{box-sizing:border-box;scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.65}
-a{color:inherit}.topbar{background:var(--deep);color:white;padding:9px 6%;font-size:.82rem;letter-spacing:.08em}
-nav{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:16px 6%;background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 5px 24px #163b2b12}
-.brand{font-family:'Playfair Display',serif;font-weight:800;font-size:1.35rem;color:var(--deep);text-decoration:none}.brand span{color:var(--gold)}
-.navlinks{display:flex;gap:16px;align-items:center;flex-wrap:wrap}.navlinks a{text-decoration:none;font-weight:700;font-size:.9rem;color:var(--deep)}.navlinks a:hover{color:#b47b24}
-.hero{min-height:410px;padding:70px 8%;display:flex;align-items:center;color:white;background:linear-gradient(90deg,#0b332be8,#0b332b9c),url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=60') center/cover}
-.hero-inner{max-width:760px}.eyebrow{color:#f1ce84;text-transform:uppercase;letter-spacing:.18em;font-weight:700;font-size:.78rem}.hero h1{font:800 clamp(2.5rem,6vw,4.8rem)/1.05 'Playfair Display',serif;margin:12px 0 18px}.hero p{font-size:1.08rem;max-width:650px;color:#f4f6f2}
-.btn{display:inline-block;background:var(--gold);color:#27352f;text-decoration:none;padding:11px 20px;border-radius:30px;font-weight:800;margin-top:12px}
-.container{width:min(1120px,88%);margin:0 auto}.section{padding:58px 0}.section.soft{background:var(--mint)}.section-head{text-align:center;max-width:760px;margin:0 auto 32px}.section-head h2,.page-title{font:700 clamp(2rem,4vw,3rem) 'Playfair Display',serif;color:var(--deep);margin:0 0 10px}.section-head p{color:var(--muted);margin:0}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:-38px;position:relative}.stat{background:white;padding:22px;border-radius:18px;box-shadow:0 12px 35px #153d2b14;text-align:center}.stat strong{display:block;color:var(--green);font:800 1.8rem 'Playfair Display',serif}.stat span{font-size:.9rem;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid #e5eee8;border-radius:18px;padding:19px;box-shadow:0 8px 24px #183d2d0c}.card h3{font:700 1.25rem 'Playfair Display',serif;color:var(--deep);margin:0 0 6px}.card p{color:var(--muted);font-size:.92rem;margin:0}
-.panel{background:white;border:1px solid #e5eee8;border-radius:18px;padding:25px;box-shadow:0 8px 26px #183d2d0b;margin-bottom:20px}.panel h2{font:700 1.45rem 'Playfair Display',serif;color:var(--deep);margin:0 0 12px}.panel h3{color:var(--green);margin:15px 0 5px}
-.content-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}.flag{height:13px;border-radius:8px;background:linear-gradient(to bottom,#ffdd00 0 50%,#17469e 50% 75%,#d42b2b 75%);margin:14px 0 18px;max-width:270px}
-.map{width:100%;height:260px;border:0;border-radius:14px;background:#e7f4ee}.note{font-size:.87rem;color:var(--muted);background:#f6f8f5;border-left:4px solid var(--gold);padding:12px 15px;border-radius:8px}
-.canton{scroll-margin-top:100px}.canton-label{display:inline-block;color:#98702c;background:#fbf2df;border-radius:20px;padding:5px 11px;font-size:.78rem;font-weight:800;margin-bottom:10px}
-footer{background:var(--deep);color:#e7f1ec;padding:32px 6%;text-align:center}footer a{color:#f2cc7e}
-@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.content-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.navlinks{gap:10px}}
-@media(max-width:540px){nav{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:1fr}.container{width:90%}.section{padding:42px 0}}
-
-/* ---- fotografías y bandera ---- */
-.photo{position:relative;margin:0 0 24px;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#176b55,#103f36);min-height:120px}
-.photo img{display:block;width:100%;height:340px;object-fit:cover}
-.photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:10px 16px;font-size:.85rem;color:#fff;background:linear-gradient(transparent,#0b332bcc)}
-.photo figcaption a{color:#f2cc7e}
-.photo .vacio{display:none}
-.photo.vacia{height:190px;display:flex;align-items:center;justify-content:center;text-align:center}
-.photo.vacia .vacio{display:block;color:#e7f4ee;font-size:.95rem;padding:0 20px}
-.photo.vacia figcaption{background:none}
-code{background:#ffffff22;padding:1px 6px;border-radius:5px;font-size:.85em}
-.bandera{margin:10px 0 0}
-.bandera img{max-width:290px;width:100%;border-radius:8px;border:1px solid #d9e6df;display:block}
-.bandera .flag{display:none}
-.bandera.vacia .flag{display:block}
-.bandera figcaption{font-size:.85rem;color:var(--muted);margin-top:6px}
-.bandera code{background:#eef3ef;color:var(--deep)}
-.lista{margin:0 0 10px;padding-left:20px}.lista li{margin-bottom:6px;color:var(--ink)}
-.panel a{color:var(--green);font-weight:700}
-.panel p b{color:var(--deep)}
-
-/* ---- ventana (modal) de cada cantón ---- */
-.sin-scroll{overflow:hidden}
-.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:18px}
-.modal.abierto{display:flex}
-.modal-fondo{position:absolute;inset:0;background:#07261fcc;backdrop-filter:blur(3px);animation:aparece .25s}
-.modal-caja{position:relative;width:min(1100px,100%);max-height:100%;display:flex;flex-direction:column;background:var(--paper);border-radius:24px;box-shadow:0 30px 80px #000a;overflow:hidden;animation:sube .3s ease}
-.modal-barra{display:flex;align-items:center;gap:10px;padding:12px 16px;background:linear-gradient(90deg,var(--deep),var(--green));color:#fff;border-bottom:4px solid var(--gold)}
-.modal-barra span{flex:1;text-align:center;font:700 1.2rem 'Playfair Display',serif;letter-spacing:.04em}
-.mb{border:0;background:#ffffff26;color:#fff;width:38px;height:38px;border-radius:50%;font-size:1.3rem;line-height:1;cursor:pointer}
-.mb:hover{background:var(--gold);color:#27352f}
-.modal-cuerpo{overflow-y:auto;padding:26px 6px 10px}
-.modal-cuerpo .container{width:100%}
-.modal-cuerpo .container,.modal-cuerpo>*{padding:0 22px}
-.modal-cuerpo .section-head h2{font-size:clamp(2rem,5vw,3rem)}
-@keyframes aparece{from{opacity:0}to{opacity:1}}
-@keyframes sube{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}
-.card{transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-4px);box-shadow:0 16px 34px #183d2d22;border-color:var(--gold)}
-@media(max-width:540px){.modal{padding:0}.modal-caja{border-radius:0;height:100%}.modal-cuerpo .container,.modal-cuerpo>*{padding:0 12px}}
-
-.btn-mapa{display:block;text-align:center;background:var(--green);color:#fff!important;text-decoration:none;padding:14px 18px;border-radius:14px;font-weight:700;border-bottom:4px solid var(--gold);transition:transform .2s}
-.btn-mapa:hover{transform:translateY(-2px);background:var(--deep)}
-
-
-/* =====================================================
-   DECORACIÓN: diario rosado (papel, cintas, polaroids)
-   ===================================================== */
-:root{--green:#e0457b;--deep:#2a1a22;--mint:#fde7ee;--gold:#f4a6bd;--ink:#3a2530;--muted:#8a6677;--paper:#fff5f8;--rosa:#f4a6bd;--rosa2:#fbd3df;--negro:#1b1418;
- --script:'Kaushan Script',cursive;--mano:'Caveat',cursive;--maquina:'Special Elite',monospace}
-body{font-family:'Quicksand',sans-serif;color:var(--ink);
- background-color:var(--paper);
- background-image:radial-gradient(#f2b8cb 1.1px,transparent 1.3px),radial-gradient(circle at 12% 8%,#ffe0ea 0,transparent 34%),radial-gradient(circle at 90% 40%,#ffdbe7 0,transparent 30%);
- background-size:22px 22px,auto,auto;background-attachment:scroll}
-/* barra superior: cinta negra */
-.topbar{background:var(--negro);color:var(--rosa);font-family:var(--maquina);letter-spacing:.14em;text-align:center;border-bottom:3px dashed var(--rosa)}
-.topbar::before,.topbar::after{content:" ♥ ";color:#fff}
-nav{background:#fffafcee;border-bottom:2px dashed var(--rosa);box-shadow:none}
-.brand{font-family:var(--script);font-size:1.7rem;font-weight:400;color:var(--negro)}
-.brand::before{content:"🎀 "}.brand span{color:var(--green)}
-.navlinks a{color:var(--negro);font-weight:700;padding:2px 8px;border-radius:14px}
-.navlinks a:hover{color:#fff;background:var(--green)}
-/* portada */
-.hero{position:relative;overflow:hidden;color:var(--negro);padding:80px 8% 90px;
- background:radial-gradient(#f0a9c1 1.2px,transparent 1.4px) 0 0/20px 20px,linear-gradient(135deg,#ffd9e5,#ffeef3 55%,#ffc9db)}
-.hero::before{content:"♥";position:absolute;right:7%;top:12%;font-size:8rem;color:#f07aa0;opacity:.35;transform:rotate(12deg)}
-.hero::after{content:"✦ ✧ ✦";position:absolute;right:16%;bottom:14%;font-size:2.2rem;color:var(--green);letter-spacing:.4em;opacity:.6}
-.hero-inner{position:relative;z-index:1}
-.eyebrow{display:inline-block;background:var(--negro);color:var(--rosa)!important;font-family:var(--maquina);letter-spacing:.14em;padding:6px 16px;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--rosa)}
-.hero h1{font-family:var(--script);font-weight:400;color:var(--negro);line-height:1.15;text-shadow:3px 3px 0 #fff}
-.hero h1::first-line{color:var(--green)}
-.hero p{color:#5a3445;font-weight:600}
-.btn{background:var(--green);color:#fff;border:2px solid var(--negro);box-shadow:4px 4px 0 var(--negro);font-family:'Quicksand',sans-serif;transition:transform .15s,box-shadow .15s}
-.btn::after{content:" ♥"}.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--negro)}
-.nota-hero{position:absolute;right:9%;bottom:12%;z-index:2;max-width:240px;background:#fff;padding:22px 20px 18px;font:700 1.35rem/1.2 var(--mano);color:#b03a63;transform:rotate(4deg);box-shadow:4px 6px 0 #f4a6bd88,0 10px 24px #0002;text-align:center}
-.nota-hero::before{content:"";position:absolute;top:-12px;left:50%;width:84px;height:24px;margin-left:-42px;background:repeating-linear-gradient(45deg,#f4a6bdcc 0 6px,#ffd3e0cc 6px 12px);transform:rotate(-3deg)}
-/* estadísticas: polaroids */
-.stats{margin-top:-46px}
-.stat{background:#fff;border-radius:3px;border:1px solid #f1cbd8;box-shadow:3px 6px 0 #f4a6bd66,0 10px 24px #6b1d3a1a;position:relative;transform:rotate(-1.5deg)}
-.stat:nth-child(2){transform:rotate(1.2deg)}.stat:nth-child(3){transform:rotate(-.8deg)}
-.stat::before{content:"";position:absolute;top:-11px;left:50%;width:74px;height:22px;margin-left:-37px;background:repeating-linear-gradient(45deg,#f4a6bdcc 0 6px,#ffd3e0cc 6px 12px);transform:rotate(2deg)}
-.stat strong{font-family:var(--script);font-weight:400;color:var(--green)}
-/* secciones y títulos */
-.section.soft{background:radial-gradient(#f2b0c7 1px,transparent 1.2px) 0 0/18px 18px,var(--rosa2)}
-.section-head h2,.page-title{font-family:var(--script);font-weight:400;color:var(--negro);position:relative;display:inline-block}
-.section-head h2::before{content:"✦ ";color:var(--green);font-size:.6em}.section-head h2::after{content:" ♥";color:var(--green);font-size:.6em}
-.section-head h2{background:linear-gradient(transparent 62%,#f9b7ca 62% 90%,transparent 90%)}
-.section-head p{font-family:var(--mano);font-size:1.4rem;color:#a2476a}
-/* paneles: hojas de diario con cinta */
-.panel{position:relative;background:#fffdfd;background-image:linear-gradient(#f6d3de 1px,transparent 1px);background-size:100% 30px;border:1px solid #f1cbd8;border-radius:4px;box-shadow:4px 5px 0 #f4a6bd55,0 12px 26px #6b1d3a14;padding:30px 26px 24px}
-.panel::before{content:"";position:absolute;top:-11px;left:28px;width:92px;height:24px;background:repeating-linear-gradient(45deg,#f4a6bdcc 0 6px,#ffd3e0cc 6px 12px);transform:rotate(-3deg)}
-.panel:nth-of-type(even)::before{left:auto;right:28px;transform:rotate(3deg)}
-.panel h2{display:inline-block;background:var(--negro);color:#fff;font:400 1rem var(--maquina);letter-spacing:.08em;text-transform:uppercase;padding:6px 20px 6px 14px;margin:0 0 16px;clip-path:polygon(0 0,100% 0,calc(100% - 10px) 50%,100% 100%,0 100%);box-shadow:3px 3px 0 var(--rosa)}
-.panel h2::before{content:"♥ ";color:var(--rosa)}
-.panel h3{font-family:var(--mano);font-size:1.5rem;color:var(--green)}
-.panel p,.panel li{background:#fffdfd}
-.lista{list-style:none;padding-left:4px}.lista li::before{content:"♥ ";color:var(--green)}
-.note{background:#ffe3ec;border-left:0;border:2px dashed var(--green);color:#7a3550;font-family:var(--mano);font-size:1.15rem;border-radius:4px;transform:rotate(-.6deg)}
-.canton-label{background:var(--negro);color:var(--rosa);font-family:var(--maquina);border-radius:0;letter-spacing:.12em;transform:rotate(-2deg)}
-/* tarjetas de cantones: notas pegadas */
-.grid{gap:26px}
-.card{position:relative;background:#fff;border:1px solid #f1cbd8;border-radius:3px;padding:26px 20px 20px;box-shadow:4px 6px 0 #f4a6bd66,0 10px 22px #6b1d3a14;transform:rotate(-1.4deg)}
-.card:nth-child(3n+2){transform:rotate(1.2deg);background:#fff0f5}.card:nth-child(3n){transform:rotate(-.6deg)}
-.card::before{content:"";position:absolute;top:-11px;left:50%;width:70px;height:22px;margin-left:-35px;background:repeating-linear-gradient(45deg,#f4a6bdcc 0 6px,#ffd3e0cc 6px 12px);transform:rotate(-3deg)}
-.card::after{content:"♥";position:absolute;right:14px;top:12px;color:var(--rosa);font-size:1.2rem}
-.card h3{font-family:var(--script);font-weight:400;font-size:1.6rem;color:var(--negro)}
-.card p{font-family:var(--mano);font-size:1.25rem;color:#b03a63}
-.card:hover{transform:rotate(0) translateY(-6px) scale(1.03)!important;box-shadow:6px 10px 0 #e0457b55,0 16px 30px #6b1d3a22;border-color:var(--green)}
-/* fotos: polaroid */
-.photo{background:#fff;border-radius:3px;padding:14px 14px 56px;min-height:0;box-shadow:5px 7px 0 #f4a6bd66,0 14px 28px #6b1d3a22;transform:rotate(-.8deg);overflow:visible}
-.photo::before{content:"";position:absolute;top:-12px;left:50%;width:100px;height:26px;margin-left:-50px;background:repeating-linear-gradient(45deg,#f4a6bdcc 0 6px,#ffd3e0cc 6px 12px);transform:rotate(2deg);z-index:2}
-.photo img{height:320px;border-radius:2px}
-.photo figcaption{color:#8a2f55;background:none;font:700 1.35rem var(--mano);bottom:12px;padding:0 18px;text-align:center}
-.photo figcaption a{color:var(--green)}
-.photo.vacia{height:auto;display:block}
-.photo.vacia .vacio{border:2px dashed var(--green);background:#fff0f5;color:#a2476a;font-family:var(--mano);font-size:1.4rem;padding:60px 20px;border-radius:4px;text-align:center}
-.photo.vacia .vacio code{background:#fbd3df;color:#8a2f55}
-.photo.vacia figcaption{color:#8a2f55}
-/* banderas y mapas: stickers */
-.bandera img{border:6px solid #fff;border-radius:2px;box-shadow:3px 4px 0 #f4a6bd77,0 8px 18px #6b1d3a22;transform:rotate(-1.5deg)}
-.bandera figcaption{font-family:var(--mano);font-size:1.2rem;color:#a2476a}
-.bandera code{background:#fbd3df;color:#8a2f55}
-.btn-mapa{background:var(--negro);color:#fff!important;border:2px solid var(--negro);border-bottom:4px solid var(--green);border-radius:6px;box-shadow:4px 4px 0 var(--rosa);font-family:var(--maquina)}
-.btn-mapa:hover{background:var(--green);transform:translate(2px,2px);box-shadow:2px 2px 0 var(--rosa)}
-.panel a{color:var(--green)}
-/* ventana de cada cantón */
-.modal-fondo{background:#2a1a22d9}
-.modal-caja{background:var(--paper);background-image:radial-gradient(#f2b8cb 1.1px,transparent 1.3px);background-size:20px 20px;border-radius:6px;border:3px solid var(--negro);box-shadow:8px 8px 0 var(--rosa),0 30px 80px #000a}
-.modal-barra{background:var(--negro);border-bottom:4px dashed var(--rosa)}
-.modal-barra span{font-family:var(--script);font-weight:400;font-size:1.7rem;color:var(--rosa)}
-.mb{background:var(--rosa);color:var(--negro)}.mb:hover{background:var(--green);color:#fff}
-.modal-cuerpo .section-head h2{font-size:clamp(2.2rem,5vw,3.2rem)}
-/* pie con puntilla */
-footer{position:relative;background:var(--negro);color:#ffd9e5;margin-top:34px;padding-top:40px;font-family:var(--mano);font-size:1.2rem}
-footer::before{content:"";position:absolute;left:0;right:0;top:-10px;height:12px;background:radial-gradient(circle at 10px 0,transparent 8px,var(--negro) 8.5px) 0 0/20px 12px repeat-x}
-footer a{color:var(--rosa)}
-@media(max-width:800px){.nota-hero{display:none}}
-@media(max-width:540px){.card,.stat,.photo{transform:none!important}}
-
-/* fotos de cantones: tamaño ajustado a la calidad de la imagen */
-.photo{max-width:480px;margin-left:auto;margin-right:auto}
-.photo img{height:auto;aspect-ratio:1.2/1;object-fit:cover}
-
-/* solo la foto, sin texto debajo */
-.photo{padding:14px 14px 34px}
-.modal-cuerpo{padding-top:36px}
-.comida-foto{margin:14px 0 0;text-align:center}.comida-foto img{max-width:100%;height:auto;border-radius:14px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
-
-/* botones bonitos del menú */
-nav .navlinks{gap:12px}
-nav .navlinks a{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;border-radius:30px;border:2px solid var(--negro);background:var(--rosa2);color:var(--negro);font-family:'Quicksand',sans-serif;font-weight:800;font-size:.95rem;box-shadow:3px 3px 0 var(--negro);transition:transform .15s,box-shadow .15s,background .15s,color .15s}
-nav .navlinks a:first-child::before{content:"🏠"}
-nav .navlinks a:last-child{background:var(--green);color:#fff}
-nav .navlinks a:last-child::before{content:"📍"}
-nav .navlinks a:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--negro);background:var(--rosa);color:var(--negro)}
-nav .navlinks a:last-child:hover{background:#c93668;color:#fff}
-@media(max-width:540px){nav{flex-direction:row;align-items:center;gap:8px;padding:12px 4%}.brand{font-size:1.3rem}nav .navlinks{flex-wrap:nowrap;gap:8px}nav .navlinks a{padding:7px 12px;font-size:.85rem}}
-.turismo-foto{margin:14px 0 0;text-align:center}.turismo-foto img{max-width:100%;height:auto;border-radius:14px;box-shadow:0 4px 14px rgba(0,0,0,.25)}.turismo-foto figcaption{margin-top:6px;font-size:.85rem;font-weight:700;opacity:.85}
-.prefecto-foto{margin:12px 0 16px;text-align:center}.prefecto-foto img{width:100%;max-width:240px;height:auto;border-radius:16px;border:3px solid var(--negro);box-shadow:4px 4px 0 var(--negro)}.prefecto-foto figcaption{margin-top:8px;font-size:.88rem;font-weight:800}
-.galeria-turismo{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 0}.galeria-turismo figure{margin:0;text-align:center}.galeria-turismo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.22)}.galeria-turismo figcaption{margin-top:5px;font-size:.78rem;font-weight:700;line-height:1.2}
-</style>
+<style>body{margin:12px}img{max-width:100%;height:auto}summary{font-size:1.25em;padding:8px 0;cursor:pointer}details{border-bottom:1px solid #999}</style>
 </head>
 <body>
-<div class="topbar">ECUADOR · REGIÓN COSTA · PROVINCIA DE LOS RÍOS</div>
-<nav><a class="brand" href="#inicio">LOS RÍOS<span>.</span></a><div class="navlinks"><a href="#inicio">Inicio</a><a href="#cantones">Datos</a><a href="sencilla.html">Versión sencilla</a></div></nav>
-<header class="hero" id="inicio"><div class="hero-inner"><div class="eyebrow">Conoce nuestra provincia</div><h1>Los Ríos,<br>tierra que inspira.</h1><p>Una provincia ecuatoriana llena de ríos, campos fértiles, tradiciones montuvias y gente trabajadora. Descubre su historia, sus paisajes y sus trece cantones en una sola página.</p><a class="btn" href="#cantones">Explorar los cantones</a></div><div class="nota-hero">Nuestra tierra, nuestra identidad ♥</div></header>
-<div class="container"><div class="stats"><div class="stat"><strong>13</strong><span>Cantones</span></div><div class="stat"><strong>898.652</strong><span>Habitantes · Censo 2022</span></div><div class="stat"><strong>Babahoyo</strong><span>Capital provincial</span></div></div></div>
-<section class="section" id="datos"><div class="container"><div class="section-head"><h2>Datos generales de la provincia</h2><p>Los Ríos se encuentra en la región Costa del Ecuador. Su territorio se caracteriza por sus ríos, llanuras, actividad agrícola y cultura montuvia.</p></div>
-<div class="content-grid"><article class="panel"><h2>Descripción de la provincia</h2><p>La provincia de Los Ríos es conocida por su riqueza agrícola y sus abundantes fuentes hídricas. Su clima cálido y sus suelos fértiles favorecen cultivos como banano, cacao, arroz, maíz y soya. La cultura montuvia forma parte importante de su identidad, expresándose en sus costumbres, gastronomía, música y festividades.</p><h3>Bandera de la provincia</h3><figure class="bandera"><img decoding="async" src="img/01-bandera-de-la-provincia-de-los-rios.webp" alt="Bandera de la provincia de Los Ríos"><figcaption>Bandera de la provincia de Los Ríos.</figcaption></figure>
-<h3>Escudo</h3><figure class="bandera"><img decoding="async" src="img/02-escudo-de-la-provincia-de-los-rios.webp" alt="Escudo de la provincia de Los Ríos" style="max-width:200px"><figcaption>Escudo de la provincia de Los Ríos.</figcaption></figure>
-<h3>Bandera de Ecuador</h3><figure class="bandera"><img decoding="async" src="img/03-bandera-de-ecuador.webp" alt="Bandera de Ecuador" style="max-width:290px"><figcaption>Bandera de Ecuador.</figcaption></figure></article>
-<article class="panel"><h2>Información principal</h2><p><b>Capital:</b> Babahoyo</p><p><b>Población:</b> 898.652 habitantes (Censo 2022).</p><p><b>Extensión:</b> aproximadamente 7.205 km².</p><p><b>Fecha de provincialización:</b> 6 de octubre de 1860.</p></article>
-<article class="panel"><h2>Prefecto de Los Ríos</h2><figure class="prefecto-foto"><img loading="lazy" decoding="async" src="img/04-jonny-enrique-teran-salcedo-prefecto-de-.webp" alt="Jonny Enrique Terán Salcedo, prefecto de Los Ríos"><figcaption>Jonny Enrique Terán Salcedo</figcaption></figure><p><b>Nombre:</b> Jonny Enrique Terán Salcedo</p><p><b>Cargo:</b> Máxima autoridad del Gobierno Provincial de Los Ríos (prefecto).</p><p><b>Función:</b> Dirige y maneja la institución provincial, y vela por el desarrollo y las obras de toda la provincia.</p></article>
-<article class="panel"><h2>Gobernador de Los Ríos</h2><figure class="prefecto-foto"><img loading="lazy" decoding="async" src="img/05-andres-rizzo-bajana-gobernador-encargado.webp" alt="Andrés Rizzo Bajaña, gobernador encargado de Los Ríos"><figcaption>Andrés Rizzo Bajaña</figcaption></figure><p><b>Nombre:</b> Andrés Rizzo Bajaña</p><p><b>Cargo:</b> Gobernador en funciones (encargado) de Los Ríos.</p><p><b>Función:</b> Es el delegado del Presidente de la República en la provincia: organiza la labor política local y lleva allí la gestión del Gobierno central.</p></article></div>
-<div class="panel"><h2>Mapa de la provincia</h2><figure class="bandera" style="margin:0 0 18px"><img loading="lazy" decoding="async" src="img/06-mapa-de-las-provincias-del-ecuador.webp" alt="Mapa de las provincias del Ecuador" style="max-width:100%;width:760px;margin:0 auto"><figcaption style="text-align:center">Los Ríos aparece en verde agua, entre Guayas, Bolívar, Cotopaxi y Santo Domingo de los Tsáchilas.</figcaption></figure></div></div></section>
-<section class="section soft" id="cantones"><div class="container"><div class="section-head"><h2>Los 13 cantones</h2><p>Presiona cualquiera para abrir una ventana con todos sus datos.</p></div><div class="grid"><a class="card" href="#baba" style="text-decoration:none"><h3>Baba</h3><p>Ver todos los datos →</p></a><a class="card" href="#babahoyo" style="text-decoration:none"><h3>Babahoyo</h3><p>Ver todos los datos →</p></a><a class="card" href="#buena-fe" style="text-decoration:none"><h3>Buena Fe</h3><p>Ver todos los datos →</p></a><a class="card" href="#mocache" style="text-decoration:none"><h3>Mocache</h3><p>Ver todos los datos →</p></a><a class="card" href="#montalvo" style="text-decoration:none"><h3>Montalvo</h3><p>Ver todos los datos →</p></a><a class="card" href="#palenque" style="text-decoration:none"><h3>Palenque</h3><p>Ver todos los datos →</p></a><a class="card" href="#puebloviejo" style="text-decoration:none"><h3>Puebloviejo</h3><p>Ver todos los datos →</p></a><a class="card" href="#quevedo" style="text-decoration:none"><h3>Quevedo</h3><p>Ver todos los datos →</p></a><a class="card" href="#quinsaloma" style="text-decoration:none"><h3>Quinsaloma</h3><p>Ver todos los datos →</p></a><a class="card" href="#urdaneta" style="text-decoration:none"><h3>Urdaneta</h3><p>Ver todos los datos →</p></a><a class="card" href="#valencia" style="text-decoration:none"><h3>Valencia</h3><p>Ver todos los datos →</p></a><a class="card" href="#ventanas" style="text-decoration:none"><h3>Ventanas</h3><p>Ver todos los datos →</p></a><a class="card" href="#vinces" style="text-decoration:none"><h3>Vinces</h3><p>Ver todos los datos →</p></a></div></div></section>
+<p><a href="diseno.html">Ver la versión con diseño →</a></p>
+<h1 id="inicio">Provincia de Los Ríos</h1>
+<img decoding="async" alt="Bandera de la provincia de Los Ríos" src="img2/01-bandera-de-la-provincia-de-los-rios.webp" style="max-width:100%;height:auto" width="400"/>
+<h2>Conoce más de nuestra Provincia</h2>
+<p>Una provincia ecuatoriana llena de ríos, campos fértiles, tradiciones montuvias y gente trabajadora. Descubre su historia, sus paisajes y sus trece cantones en una sola página.</p>
+<hr/>
+<h2>Menú de navegación</h2>
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#descripcion">Descripción</a></li>
+<li><a href="#bandera">Bandera</a></li>
+<li><a href="#autoridades">Autoridades</a></li>
+<li><a href="#poblacion">Población</a></li>
+<li><a href="#mapa">Mapa</a></li>
+<li><a href="#cantones">Cantones</a></li>
+</ul>
+<hr/>
+<h2 id="descripcion">Descripción</h2>
+<p>Los Ríos se encuentra en la región Costa del Ecuador. Su territorio se caracteriza por sus ríos, llanuras, actividad agrícola y cultura montuvia.</p>
+<p>La provincia de Los Ríos es conocida por su riqueza agrícola y sus abundantes fuentes hídricas. Su clima cálido y sus suelos fértiles favorecen cultivos como banano, cacao, arroz, maíz y soya. La cultura montuvia forma parte importante de su identidad, expresándose en sus costumbres, gastronomía, música y festividades.</p>
+<hr/>
+<h2 id="bandera">Bandera</h2>
+<h3>Bandera de la provincia de Los Ríos</h3>
+<img decoding="async" alt="Bandera de la provincia de Los Ríos" src="img2/02-bandera-de-la-provincia-de-los-rios.webp" style="max-width:100%;height:auto" width="400"/>
+<h3>Escudo de la provincia de Los Ríos</h3>
+<img decoding="async" loading="lazy" alt="Escudo de la provincia de Los Ríos" src="img2/03-escudo-de-la-provincia-de-los-rios.webp" style="max-width:100%;height:auto" width="200"/>
+<h3>Bandera de Ecuador</h3>
+<img decoding="async" loading="lazy" alt="Bandera de Ecuador" src="img2/04-bandera-de-ecuador.webp" style="max-width:100%;height:auto" width="290"/>
+<hr/>
+<h2 id="autoridades">Autoridades</h2>
+<h3>Prefecto de Los Ríos</h3>
+<img decoding="async" loading="lazy" alt="Jonny Enrique Terán Salcedo, prefecto de Los Ríos" src="img2/05-jonny-enrique-teran-salcedo-prefecto-de-.webp" style="max-width:100%;height:auto" width="240"/>
+<p><b>Nombre:</b> Jonny Enrique Terán Salcedo</p><p><b>Cargo:</b> Máxima autoridad del Gobierno Provincial de Los Ríos (prefecto).</p><p><b>Función:</b> Dirige y maneja la institución provincial, y vela por el desarrollo y las obras de toda la provincia.</p>
+<h3>Gobernador de Los Ríos</h3>
+<img decoding="async" loading="lazy" alt="Andrés Rizzo Bajaña, gobernador encargado de Los Ríos" src="img2/06-andres-rizzo-bajana-gobernador-encargado.webp" style="max-width:100%;height:auto" width="240"/>
+<p><b>Nombre:</b> Andrés Rizzo Bajaña</p><p><b>Cargo:</b> Gobernador en funciones (encargado) de Los Ríos.</p><p><b>Función:</b> Es el delegado del Presidente de la República en la provincia: organiza la labor política local y lleva allí la gestión del Gobierno central.</p>
+<hr/>
+<h2 id="poblacion">Población</h2>
+<ul><li><b>13</b> — Cantones</li><li><b>898.652</b> — Habitantes · Censo 2022</li><li><b>Babahoyo</b> — Capital provincial</li></ul>
+<p><b>Capital:</b> Babahoyo</p><p><b>Población:</b> 898.652 habitantes (Censo 2022).</p><p><b>Extensión:</b> aproximadamente 7.205 km².</p><p><b>Fecha de provincialización:</b> 6 de octubre de 1860.</p>
+<hr/>
+<h2 id="mapa">Mapa</h2>
+<img decoding="async" loading="lazy" alt="Mapa de las provincias del Ecuador" src="img2/07-mapa-de-las-provincias-del-ecuador.webp" style="max-width:100%;height:auto"/>
+<p>Los Ríos aparece en verde agua, entre Guayas, Bolívar, Cotopaxi y Santo Domingo de los Tsáchilas.</p>
+<hr/>
+<h2 id="cantones">Cantones</h2>
+<p>La provincia tiene 13 cantones. Toca el nombre de uno para ver todos sus datos:</p>
 
+<details id="baba"><summary><b>Baba</b></summary>
+<p><i>La Noble y Torera</i></p>
+<img decoding="async" loading="lazy" alt="Fotografía del cantón Baba" src="img2/08-fotografia-del-canton-baba.webp" style="max-width:100%;height:auto"/>
+<h3>Breve reseña</h3>
+<p>Baba es conocido como «La Noble y Torera». Está en la zona central de la provincia, junto a los ríos que alimentan la cuenca del Guayas, y su vida gira en torno a la agricultura, el comercio y las tradiciones montuvias.</p><p><b>Fecha de cantonización:</b> 23 de junio de 1824</p>
+<h3>Más información</h3>
+<p><b>Extensión y límites:</b> Abarca unos 516 km². Limita al norte con Vinces, al sur con Babahoyo y el Guayas, al este con Puebloviejo y Babahoyo, y al oeste con Vinces y el Guayas.</p><p><b>Economía y producción:</b> Vive de la agricultura (arroz, cacao, maíz y banano) y de la ganadería. También hay artesanos que trabajan el cuero.</p><p><b>Fiestas y tradiciones:</b> Festeja su cantonización cada 23 de junio y mantiene vivas las costumbres montubias, como los rodeos y las comidas de la zona.</p><p><b>Historia y datos curiosos:</b> Se conoce como la Villa de San Francisco de Baba y es uno de los cantones más antiguos del Ecuador. En su época de auge compitió con Guayaquil en el comercio de la cuenca del Guayas. Por sus tierras pasaron Simón Bolívar y Antonio José de Sucre.</p>
+<h3>Parroquias</h3>
+<p><b>Urbana:</b> Baba.</p><p><b>Rurales:</b> Guare e Isla de Bejucal.</p>
+<h3>Platos típicos</h3>
+<p>Bollo de pescado, seco de gallina criolla y comidas tradicionales de la zona rural.</p><figure><img decoding="async" loading="lazy" alt="Comida típica de baba" src="img2/09-comida-tipica-de-baba.webp" style="max-width:100%;height:auto"/></figure>
+<h3>Lugares turísticos</h3>
+<ul><li><b>Parque central y centro histórico.</b> Punto de encuentro del cantón, con la iglesia matriz y el comercio local.</li><li><b>Isla de Bejucal.</b> Parroquia rural de paisaje fluvial y agrícola, con construcciones antiguas y vida de campo.</li><li><b>Ruta de la miel.</b> Recorrido comunitario sobre manejo de abejas en la zona de influencia del humedal Abras de Mantequilla, compartido con Vinces y Puebloviejo.</li><li><b>Complejo Turístico Boga.</b> Complejo recreativo con piscinas, áreas para eventos y alojamiento.</li></ul><div><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Balneario El Encanto, baba" src="img2/10-balneario-el-encanto-baba.webp" style="width:100%;height:auto"/><figcaption>Balneario El Encanto</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Río Baba, baba" src="img2/11-rio-baba-baba.webp" style="width:100%;height:auto"/><figcaption>Río Baba</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Parque Central, baba" src="img2/12-parque-central-baba.webp" style="width:100%;height:auto"/><figcaption>Parque Central</figcaption></figure></div><p>Confirma horarios, acceso y servicios antes de visitar estos lugares.</p>
+<h3>Hoteles donde alojarse</h3>
+<ul><li>Complejo Turístico Boga (alojamiento y piscinas)</li></ul><p>Nombres tomados de Google Maps; confirma precios, disponibilidad y calificaciones antes de reservar.</p><a href="https://www.google.com/maps/search/hoteles+en+Baba+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Buscar más hoteles en Baba →</a>
+<h3>Bandera del cantón</h3>
+<figure><img decoding="async" loading="lazy" alt="Bandera del cantón Baba" src="img2/13-bandera-del-canton-baba.webp" style="max-width:100%;height:auto"/><figcaption>Bandera de Baba.</figcaption></figure>
+<h3>Datos del cantón</h3>
+<p><b>Alcalde/sa:</b> Jael Melo Olvera</p><p><b>Población:</b> 45.296 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p>Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p>
+<h3>Mapa</h3>
+<a href="https://www.google.com/maps/search/Baba+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Ver mapa en Google Maps</a>
 
-<div id="fichas" hidden>
-<section class="section canton" id="baba">
-<div class="container">
-<div class="section-head"><span class="canton-label">CANTÓN DE LOS RÍOS</span><h2>Baba</h2><p>La Noble y Torera</p></div>
-<figure class="photo"><img src="img/07-fotografia-del-canton-baba.webp" alt="Fotografía del cantón Baba" loading="lazy" onerror="this.parentNode.classList.add('vacia');this.remove()"><div class="vacio">Coloca aquí la foto: <code>imagenes/baba.jpg</code></div></figure>
-<div class="content-grid">
-<div>
-<article class="panel"><h2>Breve reseña</h2><p>Baba es conocido como «La Noble y Torera». Está en la zona central de la provincia, junto a los ríos que alimentan la cuenca del Guayas, y su vida gira en torno a la agricultura, el comercio y las tradiciones montuvias.</p><p><b>Fecha de cantonización:</b> 23 de junio de 1824</p></article>
-<article class="panel"><h2>Más información</h2><p><b>Extensión y límites:</b> Abarca unos 516 km². Limita al norte con Vinces, al sur con Babahoyo y el Guayas, al este con Puebloviejo y Babahoyo, y al oeste con Vinces y el Guayas.</p><p><b>Economía y producción:</b> Vive de la agricultura (arroz, cacao, maíz y banano) y de la ganadería. También hay artesanos que trabajan el cuero.</p><p><b>Fiestas y tradiciones:</b> Festeja su cantonización cada 23 de junio y mantiene vivas las costumbres montubias, como los rodeos y las comidas de la zona.</p><p><b>Historia y datos curiosos:</b> Se conoce como la Villa de San Francisco de Baba y es uno de los cantones más antiguos del Ecuador. En su época de auge compitió con Guayaquil en el comercio de la cuenca del Guayas. Por sus tierras pasaron Simón Bolívar y Antonio José de Sucre.</p></article>
-<article class="panel"><h2>Parroquias</h2><p><b>Urbana:</b> Baba.</p><p><b>Rurales:</b> Guare e Isla de Bejucal.</p></article>
-<article class="panel"><h2>Platos típicos</h2><p>Bollo de pescado, seco de gallina criolla y comidas tradicionales de la zona rural.</p><figure class="comida-foto"><img loading="lazy" decoding="async" src="img/08-comida-tipica-de-baba.webp" alt="Comida típica de baba"></figure></article>
-<article class="panel"><h2>Lugares turísticos</h2><ul class="lista"><li><b>Parque central y centro histórico.</b> Punto de encuentro del cantón, con la iglesia matriz y el comercio local.</li><li><b>Isla de Bejucal.</b> Parroquia rural de paisaje fluvial y agrícola, con construcciones antiguas y vida de campo.</li><li><b>Ruta de la miel.</b> Recorrido comunitario sobre manejo de abejas en la zona de influencia del humedal Abras de Mantequilla, compartido con Vinces y Puebloviejo.</li><li><b>Complejo Turístico Boga.</b> Complejo recreativo con piscinas, áreas para eventos y alojamiento.</li></ul><figure class="turismo-foto"><img loading="lazy" decoding="async" src="img/09-balneario-el-encanto-baba.webp" alt="Balneario El Encanto, baba"><figcaption>Balneario El Encanto</figcaption></figure><div class="galeria-turismo"><figure><img loading="lazy" decoding="async" src="img/10-balneario-el-encanto-baba.webp" alt="Balneario El Encanto, baba"><figcaption>Balneario El Encanto</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/11-rio-baba-baba.webp" alt="Río Baba, baba"><figcaption>Río Baba</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/12-parque-central-baba.webp" alt="Parque Central, baba"><figcaption>Parque Central</figcaption></figure></div><p class="note">Confirma horarios, acceso y servicios antes de visitar estos lugares.</p></article>
-<article class="panel"><h2>Hoteles donde alojarse</h2><ul class="lista"><li>Complejo Turístico Boga (alojamiento y piscinas)</li></ul><p class="note">Nombres tomados de Google Maps; confirma precios, disponibilidad y calificaciones antes de reservar.</p><a href="https://www.google.com/maps/search/hoteles+en+Baba+Los+R%C3%ADos+Ecuador" target="_blank">Buscar más hoteles en Baba →</a></article>
-</div>
-<aside>
-<article class="panel"><h2>Bandera del cantón</h2><figure class="bandera"><img loading="lazy" decoding="async" src="img/13-bandera-del-canton-baba.webp" alt="Bandera del cantón Baba"><figcaption>Bandera de Baba.</figcaption></figure></article>
-<article class="panel"><h2>Datos del cantón</h2><p><b>Alcalde/sa:</b> Jael Melo Olvera</p><p><b>Población:</b> 45.296 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p class="note">Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p></article>
-<article class="panel"><h2>Mapa</h2><a class="btn-mapa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Baba+Los+R%C3%ADos+Ecuador">📍 Ver mapa en Google Maps</a></article>
-</aside>
-</div>
-</div>
-</section>
+</details>
+<details id="babahoyo"><summary><b>Babahoyo</b></summary>
+<p><i>Capital provincial</i></p>
+<img decoding="async" loading="lazy" alt="Fotografía del cantón Babahoyo" src="img2/14-fotografia-del-canton-babahoyo.webp" style="max-width:100%;height:auto"/>
+<h3>Breve reseña</h3>
+<p>Babahoyo es la capital de la provincia de Los Ríos. Se levanta a orillas del río del mismo nombre, que durante siglos fue su vía de comercio. Es el centro administrativo, comercial y cultural de la provincia.</p><p><b>Fecha de cantonización:</b> 25 de junio de 1824</p>
+<h3>Más información</h3>
+<p><b>Extensión y límites:</b> Ocupa cerca de 1.076 km², el cantón más extenso de la provincia. Limita al norte con Urdaneta (Catarama), al sur con la provincia del Guayas, al este con Montalvo y la provincia de Bolívar, y al oeste con Baba y Puebloviejo.</p><p><b>Economía y producción:</b> Cultivos de arroz, maíz, soya, banano y cacao en sus zonas rurales, más el comercio y los servicios propios de una capital provincial. Aquí también está La Clementina, considerada la hacienda más grande del país.</p><p><b>Fiestas y tradiciones:</b> Celebra su cantonización cada 25 de junio y la provincialización de Los Ríos el 6 de octubre, con desfiles, actos cívicos, ferias y eventos culturales.</p><p><b>Historia y datos curiosos:</b> La ciudad antigua, llamada Santa Rita de Babahoyo, fue trasladada a la orilla izquierda del río. En 1821 funcionó como campamento donde ondearon, por turnos, las banderas patriota y realista.</p>
+<h3>Parroquias</h3>
+<p><b>Urbanas:</b> Clemente Baquerizo, Dr. Camilo Ponce Enríquez, Barreiro y El Salto.</p><p><b>Rurales:</b> Caracol, Febres Cordero, La Unión y Pimocha.</p>
+<h3>Platos típicos</h3>
+<p>Ayampaco, bollo de pescado, caldo de salchicha, cazuela y preparaciones con verde y pescado de río.</p><figure><img decoding="async" loading="lazy" alt="Comida típica de babahoyo" src="img2/15-comida-tipica-de-babahoyo.webp" style="max-width:100%;height:auto"/></figure>
+<h3>Lugares turísticos</h3>
+<ul><li><b>Casa de Olmedo.</b> Casa museo ligada al poeta y político guayaquileño José Joaquín de Olmedo, vinculado a la historia de la ciudad.</li><li><b>Malecón del río Babahoyo.</b> Paseo a orillas del río, ideal para caminar al atardecer.</li><li><b>Parque central y catedral.</b> Corazón histórico de la ciudad, rodeado de comercio y edificios institucionales.</li><li><b>Casa de la Cultura.</b> Espacio para exposiciones, teatro y eventos culturales.</li></ul><figure><img decoding="async" loading="lazy" alt="Parque Central, babahoyo" src="img2/16-parque-central-babahoyo.webp" style="max-width:100%;height:auto"/><figcaption>Parque Central</figcaption></figure><div><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Malecón de Babahoyo, babahoyo" src="img2/17-malecon-de-babahoyo-babahoyo.webp" style="width:100%;height:auto"/><figcaption>Malecón de Babahoyo</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Casa de Olmedo, babahoyo" src="img2/18-casa-de-olmedo-babahoyo.webp" style="width:100%;height:auto"/><figcaption>Casa de Olmedo</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Hacienda La Virginia, babahoyo" src="img2/19-hacienda-la-virginia-babahoyo.webp" style="width:100%;height:auto"/><figcaption>Hacienda La Virginia</figcaption></figure></div><p>Confirma horarios, acceso y servicios antes de visitar estos lugares.</p>
+<h3>Hoteles donde alojarse</h3>
+<ul><li>Hotel Ciudad del Río</li><li>Grand Hotel Perla Verde</li><li>Hotel Cachari</li><li>Hotel La Chorrera N1</li></ul><p>Nombres tomados de Google Maps; confirma precios, disponibilidad y calificaciones antes de reservar.</p><a href="https://www.google.com/maps/search/hoteles+en+Babahoyo+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Buscar más hoteles en Babahoyo →</a>
+<h3>Bandera del cantón</h3>
+<figure><img decoding="async" loading="lazy" alt="Bandera del cantón Babahoyo" src="img2/20-bandera-del-canton-babahoyo.webp" style="max-width:100%;height:auto"/><figcaption>Bandera de Babahoyo.</figcaption></figure>
+<h3>Datos del cantón</h3>
+<p><b>Alcalde/sa:</b> Gustavo Barquet Marún</p><p><b>Población:</b> 178.505 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p>Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p>
+<h3>Mapa</h3>
+<a href="https://www.google.com/maps/search/Babahoyo+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Ver mapa en Google Maps</a>
 
-<section class="section canton" id="babahoyo">
-<div class="container">
-<div class="section-head"><span class="canton-label">CANTÓN DE LOS RÍOS</span><h2>Babahoyo</h2><p>Capital provincial</p></div>
-<figure class="photo"><img src="img/14-fotografia-del-canton-babahoyo.webp" alt="Fotografía del cantón Babahoyo" loading="lazy" onerror="this.parentNode.classList.add('vacia');this.remove()"><div class="vacio">Coloca aquí la foto: <code>imagenes/babahoyo.jpg</code></div></figure>
-<div class="content-grid">
-<div>
-<article class="panel"><h2>Breve reseña</h2><p>Babahoyo es la capital de la provincia de Los Ríos. Se levanta a orillas del río del mismo nombre, que durante siglos fue su vía de comercio. Es el centro administrativo, comercial y cultural de la provincia.</p><p><b>Fecha de cantonización:</b> 25 de junio de 1824</p></article>
-<article class="panel"><h2>Más información</h2><p><b>Extensión y límites:</b> Ocupa cerca de 1.076 km², el cantón más extenso de la provincia. Limita al norte con Urdaneta (Catarama), al sur con la provincia del Guayas, al este con Montalvo y la provincia de Bolívar, y al oeste con Baba y Puebloviejo.</p><p><b>Economía y producción:</b> Cultivos de arroz, maíz, soya, banano y cacao en sus zonas rurales, más el comercio y los servicios propios de una capital provincial. Aquí también está La Clementina, considerada la hacienda más grande del país.</p><p><b>Fiestas y tradiciones:</b> Celebra su cantonización cada 25 de junio y la provincialización de Los Ríos el 6 de octubre, con desfiles, actos cívicos, ferias y eventos culturales.</p><p><b>Historia y datos curiosos:</b> La ciudad antigua, llamada Santa Rita de Babahoyo, fue trasladada a la orilla izquierda del río. En 1821 funcionó como campamento donde ondearon, por turnos, las banderas patriota y realista.</p></article>
-<article class="panel"><h2>Parroquias</h2><p><b>Urbanas:</b> Clemente Baquerizo, Dr. Camilo Ponce Enríquez, Barreiro y El Salto.</p><p><b>Rurales:</b> Caracol, Febres Cordero, La Unión y Pimocha.</p></article>
-<article class="panel"><h2>Platos típicos</h2><p>Ayampaco, bollo de pescado, caldo de salchicha, cazuela y preparaciones con verde y pescado de río.</p><figure class="comida-foto"><img loading="lazy" decoding="async" src="img/15-comida-tipica-de-babahoyo.webp" alt="Comida típica de babahoyo"></figure></article>
-<article class="panel"><h2>Lugares turísticos</h2><ul class="lista"><li><b>Casa de Olmedo.</b> Casa museo ligada al poeta y político guayaquileño José Joaquín de Olmedo, vinculado a la historia de la ciudad.</li><li><b>Malecón del río Babahoyo.</b> Paseo a orillas del río, ideal para caminar al atardecer.</li><li><b>Parque central y catedral.</b> Corazón histórico de la ciudad, rodeado de comercio y edificios institucionales.</li><li><b>Casa de la Cultura.</b> Espacio para exposiciones, teatro y eventos culturales.</li></ul><figure class="turismo-foto"><img loading="lazy" decoding="async" src="img/16-parque-central-babahoyo.webp" alt="Parque Central, babahoyo"><figcaption>Parque Central</figcaption></figure><div class="galeria-turismo"><figure><img loading="lazy" decoding="async" src="img/17-malecon-de-babahoyo-babahoyo.webp" alt="Malecón de Babahoyo, babahoyo"><figcaption>Malecón de Babahoyo</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/18-casa-de-olmedo-babahoyo.webp" alt="Casa de Olmedo, babahoyo"><figcaption>Casa de Olmedo</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/19-hacienda-la-virginia-babahoyo.webp" alt="Hacienda La Virginia, babahoyo"><figcaption>Hacienda La Virginia</figcaption></figure></div><p class="note">Confirma horarios, acceso y servicios antes de visitar estos lugares.</p></article>
-<article class="panel"><h2>Hoteles donde alojarse</h2><ul class="lista"><li>Hotel Ciudad del Río</li><li>Grand Hotel Perla Verde</li><li>Hotel Cachari</li><li>Hotel La Chorrera N1</li></ul><p class="note">Nombres tomados de Google Maps; confirma precios, disponibilidad y calificaciones antes de reservar.</p><a href="https://www.google.com/maps/search/hoteles+en+Babahoyo+Los+R%C3%ADos+Ecuador" target="_blank">Buscar más hoteles en Babahoyo →</a></article>
-</div>
-<aside>
-<article class="panel"><h2>Bandera del cantón</h2><figure class="bandera"><img loading="lazy" decoding="async" src="img/20-bandera-del-canton-babahoyo.webp" alt="Bandera del cantón Babahoyo"><figcaption>Bandera de Babahoyo.</figcaption></figure></article>
-<article class="panel"><h2>Datos del cantón</h2><p><b>Alcalde/sa:</b> Gustavo Barquet Marún</p><p><b>Población:</b> 178.505 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p class="note">Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p></article>
-<article class="panel"><h2>Mapa</h2><a class="btn-mapa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Babahoyo+Los+R%C3%ADos+Ecuador">📍 Ver mapa en Google Maps</a></article>
-</aside>
-</div>
-</div>
-</section>
+</details>
+<details id="buena-fe"><summary><b>Buena Fe</b></summary>
+<p><i>Tierra agrícola del norte</i></p>
+<img decoding="async" loading="lazy" alt="Fotografía del cantón Buena Fe" src="img2/21-fotografia-del-canton-buena-fe.webp" style="max-width:100%;height:auto"/>
+<h3>Breve reseña</h3>
+<p>Buena Fe, con cabecera en San Jacinto de Buena Fe, está en el norte de la provincia. Antes fue parroquia de Quevedo. Destaca por su producción agrícola y por sus ríos y esteros de agua dulce.</p><p><b>Fecha de cantonización:</b> 7 de agosto de 1992</p>
+<h3>Más información</h3>
+<p><b>Extensión y límites:</b> Ocupa cerca de 569 km² en la zona norte de la provincia. Su cabecera es San Jacinto de Buena Fe.</p><p><b>Economía y producción:</b> Es un cantón agrícola y de comercio: banano, cacao, palma africana, maracuyá y maíz, con mucha producción hacia otras ciudades.</p><p><b>Fiestas y tradiciones:</b> El 7 de agosto festeja su cantonización con desfiles, ferias, elección de reina y actividades deportivas.</p><p><b>Historia y datos curiosos:</b> Es un cantón joven, creado en 1992, que creció con familias llegadas de distintas provincias para trabajar la tierra.</p>
+<h3>Parroquias</h3>
+<p><b>Urbanas:</b> San Jacinto de Buena Fe, 7 de Agosto y 11 de Octubre.</p><p><b>Rural:</b> Patricia Pilar.</p>
+<h3>Platos típicos</h3>
+<p>Arroz con menestra y carne, bolones, tigrillo y platos con productos agrícolas locales.</p><figure><img decoding="async" loading="lazy" alt="Comida típica de buena-fe" src="img2/22-comida-tipica-de-buena-fe.webp" style="max-width:100%;height:auto"/></figure>
+<h3>Lugares turísticos</h3>
+<ul><li><b>Puerto Bajaña.</b> Balneario de agua dulce sobre un manantial que viene del río Baba; muy visitado en fines de semana.</li><li><b>Patricia Pilar.</b> Parroquia rural con paisajes de finca y espacios naturales.</li><li><b>Fincas agrícolas.</b> Visitas a cultivos de cacao, banano y maíz, típicos de la zona.</li></ul><div><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Balnearios de Buena Fe, buena-fe" src="img2/23-balnearios-de-buena-fe-buena-fe.webp" style="width:100%;height:auto"/><figcaption>Balnearios de Buena Fe</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Parque Central, buena-fe" src="img2/24-parque-central-buena-fe.webp" style="width:100%;height:auto"/><figcaption>Parque Central</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Río San Jacinto, buena-fe" src="img2/25-rio-san-jacinto-buena-fe.webp" style="width:100%;height:auto"/><figcaption>Río San Jacinto</figcaption></figure></div><p>Confirma horarios, acceso y servicios antes de visitar estos lugares.</p>
+<h3>Hoteles donde alojarse</h3>
+<p>No encontré hoteles con nombre verificado para este cantón; hay hostales y alojamientos locales pequeños. Usa el enlace para ver la lista actualizada.</p><a href="https://www.google.com/maps/search/hoteles+en+Buena+Fe+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Buscar más hoteles en Buena Fe →</a>
+<h3>Bandera del cantón</h3>
+<figure><img decoding="async" loading="lazy" alt="Bandera del cantón Buena Fe" src="img2/26-bandera-del-canton-buena-fe.webp" style="max-width:100%;height:auto"/><figcaption>Bandera de Buena Fe.</figcaption></figure>
+<h3>Datos del cantón</h3>
+<p><b>Alcalde/sa:</b> Diana Anchundia Yépez</p><p><b>Población:</b> 74.410 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p>Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p>
+<h3>Mapa</h3>
+<a href="https://www.google.com/maps/search/Buena+Fe+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Ver mapa en Google Maps</a>
 
-<section class="section canton" id="buena-fe">
-<div class="container">
-<div class="section-head"><span class="canton-label">CANTÓN DE LOS RÍOS</span><h2>Buena Fe</h2><p>Tierra agrícola del norte</p></div>
-<figure class="photo"><img src="img/21-fotografia-del-canton-buena-fe.webp" alt="Fotografía del cantón Buena Fe" loading="lazy" onerror="this.parentNode.classList.add('vacia');this.remove()"><div class="vacio">Coloca aquí la foto: <code>imagenes/buena-fe.jpg</code></div></figure>
-<div class="content-grid">
-<div>
-<article class="panel"><h2>Breve reseña</h2><p>Buena Fe, con cabecera en San Jacinto de Buena Fe, está en el norte de la provincia. Antes fue parroquia de Quevedo. Destaca por su producción agrícola y por sus ríos y esteros de agua dulce.</p><p><b>Fecha de cantonización:</b> 7 de agosto de 1992</p></article>
-<article class="panel"><h2>Más información</h2><p><b>Extensión y límites:</b> Ocupa cerca de 569 km² en la zona norte de la provincia. Su cabecera es San Jacinto de Buena Fe.</p><p><b>Economía y producción:</b> Es un cantón agrícola y de comercio: banano, cacao, palma africana, maracuyá y maíz, con mucha producción hacia otras ciudades.</p><p><b>Fiestas y tradiciones:</b> El 7 de agosto festeja su cantonización con desfiles, ferias, elección de reina y actividades deportivas.</p><p><b>Historia y datos curiosos:</b> Es un cantón joven, creado en 1992, que creció con familias llegadas de distintas provincias para trabajar la tierra.</p></article>
-<article class="panel"><h2>Parroquias</h2><p><b>Urbanas:</b> San Jacinto de Buena Fe, 7 de Agosto y 11 de Octubre.</p><p><b>Rural:</b> Patricia Pilar.</p></article>
-<article class="panel"><h2>Platos típicos</h2><p>Arroz con menestra y carne, bolones, tigrillo y platos con productos agrícolas locales.</p><figure class="comida-foto"><img loading="lazy" decoding="async" src="img/22-comida-tipica-de-buena-fe.webp" alt="Comida típica de buena-fe"></figure></article>
-<article class="panel"><h2>Lugares turísticos</h2><ul class="lista"><li><b>Puerto Bajaña.</b> Balneario de agua dulce sobre un manantial que viene del río Baba; muy visitado en fines de semana.</li><li><b>Patricia Pilar.</b> Parroquia rural con paisajes de finca y espacios naturales.</li><li><b>Fincas agrícolas.</b> Visitas a cultivos de cacao, banano y maíz, típicos de la zona.</li></ul><figure class="turismo-foto"><img loading="lazy" decoding="async" src="img/23-parque-central-buena-fe.webp" alt="Parque Central, buena-fe"><figcaption>Parque Central</figcaption></figure><div class="galeria-turismo"><figure><img loading="lazy" decoding="async" src="img/24-balnearios-de-buena-fe-buena-fe.webp" alt="Balnearios de Buena Fe, buena-fe"><figcaption>Balnearios de Buena Fe</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/25-parque-central-buena-fe.webp" alt="Parque Central, buena-fe"><figcaption>Parque Central</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/26-rio-san-jacinto-buena-fe.webp" alt="Río San Jacinto, buena-fe"><figcaption>Río San Jacinto</figcaption></figure></div><p class="note">Confirma horarios, acceso y servicios antes de visitar estos lugares.</p></article>
-<article class="panel"><h2>Hoteles donde alojarse</h2><p>No encontré hoteles con nombre verificado para este cantón; hay hostales y alojamientos locales pequeños. Usa el enlace para ver la lista actualizada.</p><a href="https://www.google.com/maps/search/hoteles+en+Buena+Fe+Los+R%C3%ADos+Ecuador" target="_blank">Buscar más hoteles en Buena Fe →</a></article>
-</div>
-<aside>
-<article class="panel"><h2>Bandera del cantón</h2><figure class="bandera"><img loading="lazy" decoding="async" src="img/27-bandera-del-canton-buena-fe.webp" alt="Bandera del cantón Buena Fe"><figcaption>Bandera de Buena Fe.</figcaption></figure></article>
-<article class="panel"><h2>Datos del cantón</h2><p><b>Alcalde/sa:</b> Diana Anchundia Yépez</p><p><b>Población:</b> 74.410 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p class="note">Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p></article>
-<article class="panel"><h2>Mapa</h2><a class="btn-mapa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Buena+Fe+Los+R%C3%ADos+Ecuador">📍 Ver mapa en Google Maps</a></article>
-</aside>
-</div>
-</div>
-</section>
+</details>
+<details id="mocache"><summary><b>Mocache</b></summary>
+<p><i>Corazón montuvio</i></p>
+<img decoding="async" loading="lazy" alt="Fotografía del cantón Mocache" src="img2/27-fotografia-del-canton-mocache.webp" style="max-width:100%;height:auto"/>
+<h3>Breve reseña</h3>
+<p>Mocache es un cantón del centro de la provincia, que antes fue parroquia de Quevedo. Su territorio es amplio y rural, con una economía basada en cultivos de ciclo corto, ganadería y comercio.</p><p><b>Fecha de cantonización:</b> 28 de mayo de 1996</p>
+<h3>Más información</h3>
+<p><b>Extensión y límites:</b> Abarca unos 562 km² (cerca de 568 según otras fuentes) y tiene una sola parroquia, la de Mocache.</p><p><b>Economía y producción:</b> Su base económica es la agricultura, sobre todo cacao, maíz y arroz, junto con la ganadería.</p><p><b>Fiestas y tradiciones:</b> El 28 de mayo celebra su cantonización con desfiles, ferias y actividades culturales.</p><p><b>Historia y datos curiosos:</b> Se convirtió en cantón el 28 de mayo de 1996. Tiene unos 42.000 habitantes, en su mayoría dedicados al campo.</p>
+<h3>Parroquias</h3>
+<p><b>Urbana:</b> Mocache (cabecera cantonal).</p>
+<h3>Platos típicos</h3>
+<p>Bollo de pescado, caldo de gallina criolla, seco de pollo y platos a base de verde y arroz.</p><figure><img decoding="async" loading="lazy" alt="Comida típica de mocache" src="img2/28-comida-tipica-de-mocache.webp" style="max-width:100%;height:auto"/></figure>
+<h3>Lugares turísticos</h3>
+<ul><li><b>Rancho «La Evidencia».</b> Rancho turístico en el centro de la provincia, con ambiente campestre y actividades montuvias.</li><li><b>Riberas de los ríos.</b> Zonas de pesca y recreación familiar en las orillas.</li><li><b>Paisaje agrícola.</b> Arrozales y fincas, muy visibles en época de cosecha.</li></ul><div><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Cascada El Salto, mocache" src="img2/29-cascada-el-salto-mocache.webp" style="width:100%;height:auto"/><figcaption>Cascada El Salto</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Río Mocache, mocache" src="img2/30-rio-mocache-mocache.webp" style="width:100%;height:auto"/><figcaption>Río Mocache</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Parque Central, mocache" src="img2/31-parque-central-mocache.webp" style="width:100%;height:auto"/><figcaption>Parque Central</figcaption></figure></div><p>Confirma horarios, acceso y servicios antes de visitar estos lugares.</p>
+<h3>Hoteles donde alojarse</h3>
+<p>No encontré hoteles con nombre verificado para este cantón; hay hostales y alojamientos locales pequeños. Usa el enlace para ver la lista actualizada.</p><a href="https://www.google.com/maps/search/hoteles+en+Mocache+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Buscar más hoteles en Mocache →</a>
+<h3>Bandera del cantón</h3>
+<figure><img decoding="async" loading="lazy" alt="Bandera del cantón Mocache" src="img2/32-bandera-del-canton-mocache.webp" style="max-width:100%;height:auto"/><figcaption>Bandera de Mocache.</figcaption></figure>
+<h3>Datos del cantón</h3>
+<p><b>Alcalde/sa:</b> Yenny Domínguez Saltos</p><p><b>Población:</b> 42.026 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p>Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p>
+<h3>Mapa</h3>
+<a href="https://www.google.com/maps/search/Mocache+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Ver mapa en Google Maps</a>
 
-<section class="section canton" id="mocache">
-<div class="container">
-<div class="section-head"><span class="canton-label">CANTÓN DE LOS RÍOS</span><h2>Mocache</h2><p>Corazón montuvio</p></div>
-<figure class="photo"><img src="img/28-fotografia-del-canton-mocache.webp" alt="Fotografía del cantón Mocache" loading="lazy" onerror="this.parentNode.classList.add('vacia');this.remove()"><div class="vacio">Coloca aquí la foto: <code>imagenes/mocache.jpg</code></div></figure>
-<div class="content-grid">
-<div>
-<article class="panel"><h2>Breve reseña</h2><p>Mocache es un cantón del centro de la provincia, que antes fue parroquia de Quevedo. Su territorio es amplio y rural, con una economía basada en cultivos de ciclo corto, ganadería y comercio.</p><p><b>Fecha de cantonización:</b> 28 de mayo de 1996</p></article>
-<article class="panel"><h2>Más información</h2><p><b>Extensión y límites:</b> Abarca unos 562 km² (cerca de 568 según otras fuentes) y tiene una sola parroquia, la de Mocache.</p><p><b>Economía y producción:</b> Su base económica es la agricultura, sobre todo cacao, maíz y arroz, junto con la ganadería.</p><p><b>Fiestas y tradiciones:</b> El 28 de mayo celebra su cantonización con desfiles, ferias y actividades culturales.</p><p><b>Historia y datos curiosos:</b> Se convirtió en cantón el 28 de mayo de 1996. Tiene unos 42.000 habitantes, en su mayoría dedicados al campo.</p></article>
-<article class="panel"><h2>Parroquias</h2><p><b>Urbana:</b> Mocache (cabecera cantonal).</p></article>
-<article class="panel"><h2>Platos típicos</h2><p>Bollo de pescado, caldo de gallina criolla, seco de pollo y platos a base de verde y arroz.</p><figure class="comida-foto"><img loading="lazy" decoding="async" src="img/29-comida-tipica-de-mocache.webp" alt="Comida típica de mocache"></figure></article>
-<article class="panel"><h2>Lugares turísticos</h2><ul class="lista"><li><b>Rancho «La Evidencia».</b> Rancho turístico en el centro de la provincia, con ambiente campestre y actividades montuvias.</li><li><b>Riberas de los ríos.</b> Zonas de pesca y recreación familiar en las orillas.</li><li><b>Paisaje agrícola.</b> Arrozales y fincas, muy visibles en época de cosecha.</li></ul><figure class="turismo-foto"><img loading="lazy" decoding="async" src="img/30-cascada-el-salto-mocache.webp" alt="Cascada El Salto, mocache"><figcaption>Cascada El Salto</figcaption></figure><div class="galeria-turismo"><figure><img loading="lazy" decoding="async" src="img/31-cascada-el-salto-mocache.webp" alt="Cascada El Salto, mocache"><figcaption>Cascada El Salto</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/32-rio-mocache-mocache.webp" alt="Río Mocache, mocache"><figcaption>Río Mocache</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/33-parque-central-mocache.webp" alt="Parque Central, mocache"><figcaption>Parque Central</figcaption></figure></div><p class="note">Confirma horarios, acceso y servicios antes de visitar estos lugares.</p></article>
-<article class="panel"><h2>Hoteles donde alojarse</h2><p>No encontré hoteles con nombre verificado para este cantón; hay hostales y alojamientos locales pequeños. Usa el enlace para ver la lista actualizada.</p><a href="https://www.google.com/maps/search/hoteles+en+Mocache+Los+R%C3%ADos+Ecuador" target="_blank">Buscar más hoteles en Mocache →</a></article>
-</div>
-<aside>
-<article class="panel"><h2>Bandera del cantón</h2><figure class="bandera"><img loading="lazy" decoding="async" src="img/34-bandera-del-canton-mocache.webp" alt="Bandera del cantón Mocache"><figcaption>Bandera de Mocache.</figcaption></figure></article>
-<article class="panel"><h2>Datos del cantón</h2><p><b>Alcalde/sa:</b> Yenny Domínguez Saltos</p><p><b>Población:</b> 42.026 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p class="note">Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p></article>
-<article class="panel"><h2>Mapa</h2><a class="btn-mapa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Mocache+Los+R%C3%ADos+Ecuador">📍 Ver mapa en Google Maps</a></article>
-</aside>
-</div>
-</div>
-</section>
+</details>
+<details id="montalvo"><summary><b>Montalvo</b></summary>
+<p><i>Tierra de la marimba y el andarele</i></p>
+<img decoding="async" loading="lazy" alt="Fotografía del cantón Montalvo" src="img2/33-fotografia-del-canton-montalvo.webp" style="max-width:100%;height:auto"/>
+<h3>Breve reseña</h3>
+<p>Montalvo está al sureste de la provincia, en el límite con la Sierra. Es conocido por su música tradicional, como la marimba y el andarele, y por sus ríos de aguas claras.</p><p><b>Fecha de cantonización:</b> 25 de abril de 1984</p>
+<h3>Más información</h3>
+<p><b>Extensión y límites:</b> Tiene unos 362 km². Se ubica al este de Babahoyo, en el borde de la provincia con Bolívar, donde la llanura empieza a subir hacia la cordillera.</p><p><b>Economía y producción:</b> Su economía descansa en la agricultura: arroz, maíz, cacao y banano, además de ganadería y comercio de paso.</p><p><b>Fiestas y tradiciones:</b> El 25 de abril recuerda su cantonización con sesión solemne, desfiles y programas culturales, y también se celebran fiestas montubias.</p><p><b>Historia y datos curiosos:</b> Es un cantón joven, creado en 1984. Por su ubicación funciona como puerta de entrada de la Costa hacia la Sierra, en la ruta a la provincia de Bolívar.</p>
+<h3>Parroquias</h3>
+<p><b>Urbana:</b> Montalvo.</p><p><b>Rural:</b> La Esmeralda.</p>
+<h3>Platos típicos</h3>
+<p>Fritada, caldo de gallina criolla, seco de pollo y platos típicos montuvios.</p><figure><img decoding="async" loading="lazy" alt="Comida típica de montalvo" src="img2/34-comida-tipica-de-montalvo.webp" style="max-width:100%;height:auto"/></figure>
+<h3>Lugares turísticos</h3>
+<ul><li><b>Río Cristal.</b> Uno de los sitios al aire libre más conocidos del cantón, usado como balneario.</li><li><b>Ríos y zonas verdes.</b> Lugares de recreación familiar y contacto con la naturaleza.</li><li><b>Música y fiestas tradicionales.</b> La marimba y el andarele forman parte de la identidad cultural del cantón.</li></ul><div><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Parque Central, montalvo" src="img2/35-parque-central-montalvo.webp" style="width:100%;height:auto"/><figcaption>Parque Central</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Balnearios del Río Cristal, montalvo" src="img2/36-balnearios-del-rio-cristal-montalvo.webp" style="width:100%;height:auto"/><figcaption>Balnearios del Río Cristal</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Santuario de la Virgen, montalvo" src="img2/37-santuario-de-la-virgen-montalvo.webp" style="width:100%;height:auto"/><figcaption>Santuario de la Virgen</figcaption></figure></div><p>Confirma horarios, acceso y servicios antes de visitar estos lugares.</p>
+<h3>Hoteles donde alojarse</h3>
+<p>No encontré hoteles con nombre verificado para este cantón; hay hostales y alojamientos locales pequeños. Usa el enlace para ver la lista actualizada.</p><a href="https://www.google.com/maps/search/hoteles+en+Montalvo+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Buscar más hoteles en Montalvo →</a>
+<h3>Bandera del cantón</h3>
+<figure><img decoding="async" loading="lazy" alt="Bandera del cantón Montalvo" src="img2/38-bandera-del-canton-montalvo.webp" style="max-width:100%;height:auto"/><figcaption>Bandera de Montalvo.</figcaption></figure>
+<h3>Datos del cantón</h3>
+<p><b>Alcalde/sa:</b> Víctor Eduardo Troncoso Rosas</p><p><b>Población:</b> 28.354 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p>Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p>
+<h3>Mapa</h3>
+<a href="https://www.google.com/maps/search/Montalvo+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Ver mapa en Google Maps</a>
 
-<section class="section canton" id="montalvo">
-<div class="container">
-<div class="section-head"><span class="canton-label">CANTÓN DE LOS RÍOS</span><h2>Montalvo</h2><p>Tierra de la marimba y el andarele</p></div>
-<figure class="photo"><img src="img/35-fotografia-del-canton-montalvo.webp" alt="Fotografía del cantón Montalvo" loading="lazy" onerror="this.parentNode.classList.add('vacia');this.remove()"><div class="vacio">Coloca aquí la foto: <code>imagenes/montalvo.jpg</code></div></figure>
-<div class="content-grid">
-<div>
-<article class="panel"><h2>Breve reseña</h2><p>Montalvo está al sureste de la provincia, en el límite con la Sierra. Es conocido por su música tradicional, como la marimba y el andarele, y por sus ríos de aguas claras.</p><p><b>Fecha de cantonización:</b> 25 de abril de 1984</p></article>
-<article class="panel"><h2>Más información</h2><p><b>Extensión y límites:</b> Tiene unos 362 km². Se ubica al este de Babahoyo, en el borde de la provincia con Bolívar, donde la llanura empieza a subir hacia la cordillera.</p><p><b>Economía y producción:</b> Su economía descansa en la agricultura: arroz, maíz, cacao y banano, además de ganadería y comercio de paso.</p><p><b>Fiestas y tradiciones:</b> El 25 de abril recuerda su cantonización con sesión solemne, desfiles y programas culturales, y también se celebran fiestas montubias.</p><p><b>Historia y datos curiosos:</b> Es un cantón joven, creado en 1984. Por su ubicación funciona como puerta de entrada de la Costa hacia la Sierra, en la ruta a la provincia de Bolívar.</p></article>
-<article class="panel"><h2>Parroquias</h2><p><b>Urbana:</b> Montalvo.</p><p><b>Rural:</b> La Esmeralda.</p></article>
-<article class="panel"><h2>Platos típicos</h2><p>Fritada, caldo de gallina criolla, seco de pollo y platos típicos montuvios.</p><figure class="comida-foto"><img loading="lazy" decoding="async" src="img/36-comida-tipica-de-montalvo.webp" alt="Comida típica de montalvo"></figure></article>
-<article class="panel"><h2>Lugares turísticos</h2><ul class="lista"><li><b>Río Cristal.</b> Uno de los sitios al aire libre más conocidos del cantón, usado como balneario.</li><li><b>Ríos y zonas verdes.</b> Lugares de recreación familiar y contacto con la naturaleza.</li><li><b>Música y fiestas tradicionales.</b> La marimba y el andarele forman parte de la identidad cultural del cantón.</li></ul><figure class="turismo-foto"><img loading="lazy" decoding="async" src="img/37-parque-central-montalvo.webp" alt="Parque Central, montalvo"><figcaption>Parque Central</figcaption></figure><div class="galeria-turismo"><figure><img loading="lazy" decoding="async" src="img/38-parque-central-montalvo.webp" alt="Parque Central, montalvo"><figcaption>Parque Central</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/39-balnearios-del-rio-cristal-montalvo.webp" alt="Balnearios del Río Cristal, montalvo"><figcaption>Balnearios del Río Cristal</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/40-santuario-de-la-virgen-montalvo.webp" alt="Santuario de la Virgen, montalvo"><figcaption>Santuario de la Virgen</figcaption></figure></div><p class="note">Confirma horarios, acceso y servicios antes de visitar estos lugares.</p></article>
-<article class="panel"><h2>Hoteles donde alojarse</h2><p>No encontré hoteles con nombre verificado para este cantón; hay hostales y alojamientos locales pequeños. Usa el enlace para ver la lista actualizada.</p><a href="https://www.google.com/maps/search/hoteles+en+Montalvo+Los+R%C3%ADos+Ecuador" target="_blank">Buscar más hoteles en Montalvo →</a></article>
-</div>
-<aside>
-<article class="panel"><h2>Bandera del cantón</h2><figure class="bandera"><img loading="lazy" decoding="async" src="img/41-bandera-del-canton-montalvo.webp" alt="Bandera del cantón Montalvo"><figcaption>Bandera de Montalvo.</figcaption></figure></article>
-<article class="panel"><h2>Datos del cantón</h2><p><b>Alcalde/sa:</b> Víctor Eduardo Troncoso Rosas</p><p><b>Población:</b> 28.354 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p class="note">Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p></article>
-<article class="panel"><h2>Mapa</h2><a class="btn-mapa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Montalvo+Los+R%C3%ADos+Ecuador">📍 Ver mapa en Google Maps</a></article>
-</aside>
-</div>
-</div>
-</section>
+</details>
+<details id="palenque"><summary><b>Palenque</b></summary>
+<p><i>Entre ríos y haciendas</i></p>
+<img decoding="async" loading="lazy" alt="Fotografía del cantón Palenque" src="img2/39-fotografia-del-canton-palenque.webp" style="max-width:100%;height:auto"/>
+<h3>Breve reseña</h3>
+<p>Palenque está en el suroeste de la provincia, junto al río del mismo nombre. Su economía es sobre todo agrícola y ganadera, y conserva reservas naturales importantes.</p><p><b>Fecha de cantonización:</b> 2 de agosto de 1990</p>
+<h3>Más información</h3>
+<p><b>Extensión y límites:</b> Alcanza unos 570 km², casi todo rural, con bosque, ríos y haciendas en la parte central de la provincia.</p><p><b>Economía y producción:</b> La base es la agricultura: cacao, banano, maíz, arroz y frutas, junto con ganadería. El turismo de naturaleza crece alrededor de su reserva.</p><p><b>Fiestas y tradiciones:</b> El 2 de agosto se celebra su cantonización, con desfiles, programas culturales y actividades campesinas.</p><p><b>Historia y datos curiosos:</b> Se hizo cantón en 1990. Su gran orgullo es la Estación Científica Río Palenque, un bosque protegido que guarda plantas y aves propias del bosque húmedo tropical.</p>
+<h3>Parroquias</h3>
+<p><b>Urbana:</b> Palenque (cabecera cantonal).</p>
+<h3>Platos típicos</h3>
+<p>Seco de gallina criolla, caldo de salchicha, bolones y comida tradicional montuvia.</p><figure><img decoding="async" loading="lazy" alt="Comida típica de palenque" src="img2/40-comida-tipica-de-palenque.webp" style="max-width:100%;height:auto"/></figure>
+<h3>Lugares turísticos</h3>
+<ul><li><b>Reserva Biológica Jauneche.</b> Bosque húmedo tropical de gran valor ecológico, usado para investigación y observación de flora y fauna.</li><li><b>Playa de La Reveza.</b> Playa de río, muy concurrida en verano.</li><li><b>Haciendas y celebraciones tradicionales.</b> Rodeos y fiestas típicas de la cultura montuvia.</li></ul><div><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Reserva Ecológica Palenque, palenque" src="img2/41-reserva-ecologica-palenque-palenque.webp" style="width:100%;height:auto"/><figcaption>Reserva Ecológica Palenque</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Río Palenque, palenque" src="img2/42-rio-palenque-palenque.webp" style="width:100%;height:auto"/><figcaption>Río Palenque</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Cascada El Encanto, palenque" src="img2/43-cascada-el-encanto-palenque.webp" style="width:100%;height:auto"/><figcaption>Cascada El Encanto</figcaption></figure></div><p>Confirma horarios, acceso y servicios antes de visitar estos lugares.</p>
+<h3>Hoteles donde alojarse</h3>
+<ul><li>Hotel Palenque</li></ul><p>Nombres tomados de Google Maps; confirma precios, disponibilidad y calificaciones antes de reservar.</p><a href="https://www.google.com/maps/search/hoteles+en+Palenque+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Buscar más hoteles en Palenque →</a>
+<h3>Bandera del cantón</h3>
+<figure><img decoding="async" loading="lazy" alt="Bandera del cantón Palenque" src="img2/44-bandera-del-canton-palenque.webp" style="max-width:100%;height:auto"/><figcaption>Bandera de Palenque.</figcaption></figure>
+<h3>Datos del cantón</h3>
+<p><b>Alcalde/sa:</b> Jordy Carriel Navarrete</p><p><b>Población:</b> 24.838 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p>Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p>
+<h3>Mapa</h3>
+<a href="https://www.google.com/maps/search/Palenque+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Ver mapa en Google Maps</a>
 
-<section class="section canton" id="palenque">
-<div class="container">
-<div class="section-head"><span class="canton-label">CANTÓN DE LOS RÍOS</span><h2>Palenque</h2><p>Entre ríos y haciendas</p></div>
-<figure class="photo"><img src="img/42-fotografia-del-canton-palenque.webp" alt="Fotografía del cantón Palenque" loading="lazy" onerror="this.parentNode.classList.add('vacia');this.remove()"><div class="vacio">Coloca aquí la foto: <code>imagenes/palenque.jpg</code></div></figure>
-<div class="content-grid">
-<div>
-<article class="panel"><h2>Breve reseña</h2><p>Palenque está en el suroeste de la provincia, junto al río del mismo nombre. Su economía es sobre todo agrícola y ganadera, y conserva reservas naturales importantes.</p><p><b>Fecha de cantonización:</b> 2 de agosto de 1990</p></article>
-<article class="panel"><h2>Más información</h2><p><b>Extensión y límites:</b> Alcanza unos 570 km², casi todo rural, con bosque, ríos y haciendas en la parte central de la provincia.</p><p><b>Economía y producción:</b> La base es la agricultura: cacao, banano, maíz, arroz y frutas, junto con ganadería. El turismo de naturaleza crece alrededor de su reserva.</p><p><b>Fiestas y tradiciones:</b> El 2 de agosto se celebra su cantonización, con desfiles, programas culturales y actividades campesinas.</p><p><b>Historia y datos curiosos:</b> Se hizo cantón en 1990. Su gran orgullo es la Estación Científica Río Palenque, un bosque protegido que guarda plantas y aves propias del bosque húmedo tropical.</p></article>
-<article class="panel"><h2>Parroquias</h2><p><b>Urbana:</b> Palenque (cabecera cantonal).</p></article>
-<article class="panel"><h2>Platos típicos</h2><p>Seco de gallina criolla, caldo de salchicha, bolones y comida tradicional montuvia.</p><figure class="comida-foto"><img loading="lazy" decoding="async" src="img/43-comida-tipica-de-palenque.webp" alt="Comida típica de palenque"></figure></article>
-<article class="panel"><h2>Lugares turísticos</h2><ul class="lista"><li><b>Reserva Biológica Jauneche.</b> Bosque húmedo tropical de gran valor ecológico, usado para investigación y observación de flora y fauna.</li><li><b>Playa de La Reveza.</b> Playa de río, muy concurrida en verano.</li><li><b>Haciendas y celebraciones tradicionales.</b> Rodeos y fiestas típicas de la cultura montuvia.</li></ul><figure class="turismo-foto"><img loading="lazy" decoding="async" src="img/44-reserva-ecologica-palenque-palenque.webp" alt="Reserva Ecológica Palenque, palenque"><figcaption>Reserva Ecológica Palenque</figcaption></figure><div class="galeria-turismo"><figure><img loading="lazy" decoding="async" src="img/45-reserva-ecologica-palenque-palenque.webp" alt="Reserva Ecológica Palenque, palenque"><figcaption>Reserva Ecológica Palenque</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/46-rio-palenque-palenque.webp" alt="Río Palenque, palenque"><figcaption>Río Palenque</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/47-cascada-el-encanto-palenque.webp" alt="Cascada El Encanto, palenque"><figcaption>Cascada El Encanto</figcaption></figure></div><p class="note">Confirma horarios, acceso y servicios antes de visitar estos lugares.</p></article>
-<article class="panel"><h2>Hoteles donde alojarse</h2><ul class="lista"><li>Hotel Palenque</li></ul><p class="note">Nombres tomados de Google Maps; confirma precios, disponibilidad y calificaciones antes de reservar.</p><a href="https://www.google.com/maps/search/hoteles+en+Palenque+Los+R%C3%ADos+Ecuador" target="_blank">Buscar más hoteles en Palenque →</a></article>
-</div>
-<aside>
-<article class="panel"><h2>Bandera del cantón</h2><figure class="bandera"><img loading="lazy" decoding="async" src="img/48-bandera-del-canton-palenque.webp" alt="Bandera del cantón Palenque"><figcaption>Bandera de Palenque.</figcaption></figure></article>
-<article class="panel"><h2>Datos del cantón</h2><p><b>Alcalde/sa:</b> Jordy Carriel Navarrete</p><p><b>Población:</b> 24.838 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p class="note">Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p></article>
-<article class="panel"><h2>Mapa</h2><a class="btn-mapa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Palenque+Los+R%C3%ADos+Ecuador">📍 Ver mapa en Google Maps</a></article>
-</aside>
-</div>
-</div>
-</section>
+</details>
+<details id="puebloviejo"><summary><b>Puebloviejo</b></summary>
+<p><i>Uno de los cantones más antiguos</i></p>
+<img decoding="async" loading="lazy" alt="Fotografía del cantón Puebloviejo" src="img2/45-fotografia-del-canton-puebloviejo.webp" style="max-width:100%;height:auto"/>
+<h3>Breve reseña</h3>
+<p>Puebloviejo es uno de los cantones más antiguos de la provincia. Se ubica al sur, entre Babahoyo y Vinces, y su territorio incluye zonas de humedal ligadas al sistema Abras de Mantequilla.</p><p><b>Fecha de cantonización:</b> 7 de febrero de 1846</p>
+<h3>Más información</h3>
+<p><b>Extensión y límites:</b> Abarca cerca de 338 km², entre ríos y zonas bajas de la parte sur de la provincia, junto a Babahoyo, Baba y Ventanas.</p><p><b>Economía y producción:</b> Sus habitantes se dedican sobre todo al cultivo de banano, cacao y arroz, y al comercio que se mueve por sus ríos y carreteras.</p><p><b>Fiestas y tradiciones:</b> El 7 de febrero se celebra su cantonización con desfiles, actos cívicos y ferias comunitarias.</p><p><b>Historia y datos curiosos:</b> Es uno de los cantones históricos: ya existía en 1860, cuando se creó la provincia de Los Ríos junto con Babahoyo, Baba, Vinces, Chimbo y Guaranda.</p>
+<h3>Parroquias</h3>
+<p><b>Urbana:</b> Puebloviejo.</p><p><b>Rurales:</b> Puerto Pechiche y San Juan.</p>
+<h3>Platos típicos</h3>
+<p>Bollo de pescado, caldo de gallina, arroz con menestra y platos preparados con verde.</p><figure><img decoding="async" loading="lazy" alt="Comida típica de puebloviejo" src="img2/46-comida-tipica-de-puebloviejo.webp" style="max-width:100%;height:auto"/></figure>
+<h3>Lugares turísticos</h3>
+<ul><li><b>Iglesia y parque central.</b> Centro tradicional del cantón.</li><li><b>Humedal Abras de Mantequilla.</b> Su zona de influencia abarca comunidades de Puebloviejo, Baba y Vinces; es sitio Ramsar y refugio de aves.</li><li><b>Ruta de la miel.</b> Recorrido comunitario sobre el manejo de abejas.</li></ul><div><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Río Puebloviejo, puebloviejo" src="img2/47-rio-puebloviejo-puebloviejo.webp" style="width:100%;height:auto"/><figcaption>Río Puebloviejo</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Parque Central, puebloviejo" src="img2/48-parque-central-puebloviejo.webp" style="width:100%;height:auto"/><figcaption>Parque Central</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Balneario El Paraíso, puebloviejo" src="img2/49-balneario-el-paraiso-puebloviejo.webp" style="width:100%;height:auto"/><figcaption>Balneario El Paraíso</figcaption></figure></div><p>Confirma horarios, acceso y servicios antes de visitar estos lugares.</p>
+<h3>Hoteles donde alojarse</h3>
+<p>No encontré hoteles con nombre verificado para este cantón; hay hostales y alojamientos locales pequeños. Usa el enlace para ver la lista actualizada.</p><a href="https://www.google.com/maps/search/hoteles+en+Puebloviejo+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Buscar más hoteles en Puebloviejo →</a>
+<h3>Bandera del cantón</h3>
+<figure><img decoding="async" loading="lazy" alt="Bandera del cantón Puebloviejo" src="img2/50-bandera-del-canton-puebloviejo.webp" style="max-width:100%;height:auto"/><figcaption>Bandera de Puebloviejo.</figcaption></figure>
+<h3>Datos del cantón</h3>
+<p><b>Alcalde/sa:</b> Elsy Ospina Garcés</p><p><b>Población:</b> 40.961 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p>Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p>
+<h3>Mapa</h3>
+<a href="https://www.google.com/maps/search/Puebloviejo+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Ver mapa en Google Maps</a>
 
-<section class="section canton" id="puebloviejo">
-<div class="container">
-<div class="section-head"><span class="canton-label">CANTÓN DE LOS RÍOS</span><h2>Puebloviejo</h2><p>Uno de los cantones más antiguos</p></div>
-<figure class="photo"><img src="img/49-fotografia-del-canton-puebloviejo.webp" alt="Fotografía del cantón Puebloviejo" loading="lazy" onerror="this.parentNode.classList.add('vacia');this.remove()"><div class="vacio">Coloca aquí la foto: <code>imagenes/puebloviejo.jpg</code></div></figure>
-<div class="content-grid">
-<div>
-<article class="panel"><h2>Breve reseña</h2><p>Puebloviejo es uno de los cantones más antiguos de la provincia. Se ubica al sur, entre Babahoyo y Vinces, y su territorio incluye zonas de humedal ligadas al sistema Abras de Mantequilla.</p><p><b>Fecha de cantonización:</b> 7 de febrero de 1846</p></article>
-<article class="panel"><h2>Más información</h2><p><b>Extensión y límites:</b> Abarca cerca de 338 km², entre ríos y zonas bajas de la parte sur de la provincia, junto a Babahoyo, Baba y Ventanas.</p><p><b>Economía y producción:</b> Sus habitantes se dedican sobre todo al cultivo de banano, cacao y arroz, y al comercio que se mueve por sus ríos y carreteras.</p><p><b>Fiestas y tradiciones:</b> El 7 de febrero se celebra su cantonización con desfiles, actos cívicos y ferias comunitarias.</p><p><b>Historia y datos curiosos:</b> Es uno de los cantones históricos: ya existía en 1860, cuando se creó la provincia de Los Ríos junto con Babahoyo, Baba, Vinces, Chimbo y Guaranda.</p></article>
-<article class="panel"><h2>Parroquias</h2><p><b>Urbana:</b> Puebloviejo.</p><p><b>Rurales:</b> Puerto Pechiche y San Juan.</p></article>
-<article class="panel"><h2>Platos típicos</h2><p>Bollo de pescado, caldo de gallina, arroz con menestra y platos preparados con verde.</p><figure class="comida-foto"><img loading="lazy" decoding="async" src="img/50-comida-tipica-de-puebloviejo.webp" alt="Comida típica de puebloviejo"></figure></article>
-<article class="panel"><h2>Lugares turísticos</h2><ul class="lista"><li><b>Iglesia y parque central.</b> Centro tradicional del cantón.</li><li><b>Humedal Abras de Mantequilla.</b> Su zona de influencia abarca comunidades de Puebloviejo, Baba y Vinces; es sitio Ramsar y refugio de aves.</li><li><b>Ruta de la miel.</b> Recorrido comunitario sobre el manejo de abejas.</li></ul><figure class="turismo-foto"><img loading="lazy" decoding="async" src="img/51-rio-puebloviejo-puebloviejo.webp" alt="Río Puebloviejo, puebloviejo"><figcaption>Río Puebloviejo</figcaption></figure><div class="galeria-turismo"><figure><img loading="lazy" decoding="async" src="img/52-rio-puebloviejo-puebloviejo.webp" alt="Río Puebloviejo, puebloviejo"><figcaption>Río Puebloviejo</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/53-parque-central-puebloviejo.webp" alt="Parque Central, puebloviejo"><figcaption>Parque Central</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/54-balneario-el-paraiso-puebloviejo.webp" alt="Balneario El Paraíso, puebloviejo"><figcaption>Balneario El Paraíso</figcaption></figure></div><p class="note">Confirma horarios, acceso y servicios antes de visitar estos lugares.</p></article>
-<article class="panel"><h2>Hoteles donde alojarse</h2><p>No encontré hoteles con nombre verificado para este cantón; hay hostales y alojamientos locales pequeños. Usa el enlace para ver la lista actualizada.</p><a href="https://www.google.com/maps/search/hoteles+en+Puebloviejo+Los+R%C3%ADos+Ecuador" target="_blank">Buscar más hoteles en Puebloviejo →</a></article>
-</div>
-<aside>
-<article class="panel"><h2>Bandera del cantón</h2><figure class="bandera"><img loading="lazy" decoding="async" src="img/55-bandera-del-canton-puebloviejo.webp" alt="Bandera del cantón Puebloviejo"><figcaption>Bandera de Puebloviejo.</figcaption></figure></article>
-<article class="panel"><h2>Datos del cantón</h2><p><b>Alcalde/sa:</b> Elsy Ospina Garcés</p><p><b>Población:</b> 40.961 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p class="note">Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p></article>
-<article class="panel"><h2>Mapa</h2><a class="btn-mapa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Puebloviejo+Los+R%C3%ADos+Ecuador">📍 Ver mapa en Google Maps</a></article>
-</aside>
-</div>
-</div>
-</section>
+</details>
+<details id="quevedo"><summary><b>Quevedo</b></summary>
+<p><i>La ciudad más poblada de la provincia</i></p>
+<img decoding="async" loading="lazy" alt="Fotografía del cantón Quevedo" src="img2/51-fotografia-del-canton-quevedo.webp" style="max-width:100%;height:auto"/>
+<h3>Breve reseña</h3>
+<p>Quevedo es el cantón más poblado de Los Ríos y un gran centro comercial de la Costa y la Sierra. Su ubicación en la ruta hacia Quito y Guayaquil la volvió una ciudad de paso y de negocios.</p><p><b>Fecha de cantonización:</b> 7 de octubre de 1943</p>
+<h3>Más información</h3>
+<p><b>Extensión y límites:</b> Es de los cantones más pequeños: apenas unos 303 km², pero concentra la mayor población de la provincia, con más de 200.000 habitantes.</p><p><b>Economía y producción:</b> Es el principal centro comercial y agroindustrial de Los Ríos: banano, maíz, palma africana, cacao y un comercio muy activo con la Sierra.</p><p><b>Fiestas y tradiciones:</b> Cada 7 de octubre festeja su cantonización con desfiles, ferias, elección de reina y eventos deportivos y culturales.</p><p><b>Historia y datos curiosos:</b> En 1860 era solo una parroquia. Con el tiempo creció gracias a los ríos y a la agricultura hasta convertirse en la ciudad más poblada de la provincia.</p>
+<h3>Parroquias</h3>
+<p><b>Urbanas:</b> Quevedo, San Camilo, Guayacán, Nicolás Infante Díaz, San Cristóbal, Siete de Octubre, 24 de Mayo, Venus del Río Quevedo y Viva Alfaro.</p><p><b>Rurales:</b> San Carlos y La Esperanza.</p>
+<h3>Platos típicos</h3>
+<p>Bollos, ceviches, encebollado, bolón de verde, tigrillo y platos de comida costeña.</p><figure><img decoding="async" loading="lazy" alt="Comida típica de quevedo" src="img2/52-comida-tipica-de-quevedo.webp" style="max-width:100%;height:auto"/></figure>
+<h3>Lugares turísticos</h3>
+<ul><li><b>Malecón de Quevedo.</b> Paseo junto al río, con zonas de descanso y comida.</li><li><b>Parque central.</b> Plaza principal rodeada de comercio e iglesias.</li><li><b>Centros recreativos y balnearios.</b> Opciones de piscinas y áreas verdes en las afueras de la ciudad.</li></ul><div><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Malecón Eloy Alfaro, quevedo" src="img2/53-malecon-eloy-alfaro-quevedo.webp" style="width:100%;height:auto"/><figcaption>Malecón Eloy Alfaro</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Parque de la Madre, quevedo" src="img2/54-parque-de-la-madre-quevedo.webp" style="width:100%;height:auto"/><figcaption>Parque de la Madre</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Río Quevedo, quevedo" src="img2/55-rio-quevedo-quevedo.webp" style="width:100%;height:auto"/><figcaption>Río Quevedo</figcaption></figure></div><p>Confirma horarios, acceso y servicios antes de visitar estos lugares.</p>
+<h3>Hoteles donde alojarse</h3>
+<ul><li>Crespotel Hotel Boutique</li><li>Hotel Olímpico</li><li>Del Rio Hotel</li><li>D’ Ruiz Hotel</li><li>Hotel Palmar del Sol</li></ul><p>Nombres tomados de Google Maps; confirma precios, disponibilidad y calificaciones antes de reservar.</p><a href="https://www.google.com/maps/search/hoteles+en+Quevedo+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Buscar más hoteles en Quevedo →</a>
+<h3>Bandera del cantón</h3>
+<figure><img decoding="async" loading="lazy" alt="Bandera del cantón Quevedo" src="img2/56-bandera-del-canton-quevedo.webp" style="max-width:100%;height:auto"/><figcaption>Bandera de Quevedo.</figcaption></figure>
+<h3>Datos del cantón</h3>
+<p><b>Alcalde/sa:</b> Alexis Fernando Matute Matute</p><p><b>Población:</b> 206.008 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p>Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p>
+<h3>Mapa</h3>
+<a href="https://www.google.com/maps/search/Quevedo+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Ver mapa en Google Maps</a>
 
-<section class="section canton" id="quevedo">
-<div class="container">
-<div class="section-head"><span class="canton-label">CANTÓN DE LOS RÍOS</span><h2>Quevedo</h2><p>La ciudad más poblada de la provincia</p></div>
-<figure class="photo"><img src="img/56-fotografia-del-canton-quevedo.webp" alt="Fotografía del cantón Quevedo" loading="lazy" onerror="this.parentNode.classList.add('vacia');this.remove()"><div class="vacio">Coloca aquí la foto: <code>imagenes/quevedo.jpg</code></div></figure>
-<div class="content-grid">
-<div>
-<article class="panel"><h2>Breve reseña</h2><p>Quevedo es el cantón más poblado de Los Ríos y un gran centro comercial de la Costa y la Sierra. Su ubicación en la ruta hacia Quito y Guayaquil la volvió una ciudad de paso y de negocios.</p><p><b>Fecha de cantonización:</b> 7 de octubre de 1943</p></article>
-<article class="panel"><h2>Más información</h2><p><b>Extensión y límites:</b> Es de los cantones más pequeños: apenas unos 303 km², pero concentra la mayor población de la provincia, con más de 200.000 habitantes.</p><p><b>Economía y producción:</b> Es el principal centro comercial y agroindustrial de Los Ríos: banano, maíz, palma africana, cacao y un comercio muy activo con la Sierra.</p><p><b>Fiestas y tradiciones:</b> Cada 7 de octubre festeja su cantonización con desfiles, ferias, elección de reina y eventos deportivos y culturales.</p><p><b>Historia y datos curiosos:</b> En 1860 era solo una parroquia. Con el tiempo creció gracias a los ríos y a la agricultura hasta convertirse en la ciudad más poblada de la provincia.</p></article>
-<article class="panel"><h2>Parroquias</h2><p><b>Urbanas:</b> Quevedo, San Camilo, Guayacán, Nicolás Infante Díaz, San Cristóbal, Siete de Octubre, 24 de Mayo, Venus del Río Quevedo y Viva Alfaro.</p><p><b>Rurales:</b> San Carlos y La Esperanza.</p></article>
-<article class="panel"><h2>Platos típicos</h2><p>Bollos, ceviches, encebollado, bolón de verde, tigrillo y platos de comida costeña.</p><figure class="comida-foto"><img loading="lazy" decoding="async" src="img/57-comida-tipica-de-quevedo.webp" alt="Comida típica de quevedo"></figure></article>
-<article class="panel"><h2>Lugares turísticos</h2><ul class="lista"><li><b>Malecón de Quevedo.</b> Paseo junto al río, con zonas de descanso y comida.</li><li><b>Parque central.</b> Plaza principal rodeada de comercio e iglesias.</li><li><b>Centros recreativos y balnearios.</b> Opciones de piscinas y áreas verdes en las afueras de la ciudad.</li></ul><figure class="turismo-foto"><img loading="lazy" decoding="async" src="img/58-malecon-eloy-alfaro-quevedo.webp" alt="Malecón Eloy Alfaro, quevedo"><figcaption>Malecón Eloy Alfaro</figcaption></figure><div class="galeria-turismo"><figure><img loading="lazy" decoding="async" src="img/59-malecon-eloy-alfaro-quevedo.webp" alt="Malecón Eloy Alfaro, quevedo"><figcaption>Malecón Eloy Alfaro</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/60-parque-de-la-madre-quevedo.webp" alt="Parque de la Madre, quevedo"><figcaption>Parque de la Madre</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/61-rio-quevedo-quevedo.webp" alt="Río Quevedo, quevedo"><figcaption>Río Quevedo</figcaption></figure></div><p class="note">Confirma horarios, acceso y servicios antes de visitar estos lugares.</p></article>
-<article class="panel"><h2>Hoteles donde alojarse</h2><ul class="lista"><li>Crespotel Hotel Boutique</li><li>Hotel Olímpico</li><li>Del Rio Hotel</li><li>D’ Ruiz Hotel</li><li>Hotel Palmar del Sol</li></ul><p class="note">Nombres tomados de Google Maps; confirma precios, disponibilidad y calificaciones antes de reservar.</p><a href="https://www.google.com/maps/search/hoteles+en+Quevedo+Los+R%C3%ADos+Ecuador" target="_blank">Buscar más hoteles en Quevedo →</a></article>
-</div>
-<aside>
-<article class="panel"><h2>Bandera del cantón</h2><figure class="bandera"><img loading="lazy" decoding="async" src="img/62-bandera-del-canton-quevedo.webp" alt="Bandera del cantón Quevedo"><figcaption>Bandera de Quevedo.</figcaption></figure></article>
-<article class="panel"><h2>Datos del cantón</h2><p><b>Alcalde/sa:</b> Alexis Fernando Matute Matute</p><p><b>Población:</b> 206.008 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p class="note">Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p></article>
-<article class="panel"><h2>Mapa</h2><a class="btn-mapa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Quevedo+Los+R%C3%ADos+Ecuador">📍 Ver mapa en Google Maps</a></article>
-</aside>
-</div>
-</div>
-</section>
+</details>
+<details id="quinsaloma"><summary><b>Quinsaloma</b></summary>
+<p><i>El cantón más joven</i></p>
+<img decoding="async" loading="lazy" alt="Fotografía del cantón Quinsaloma" src="img2/57-fotografia-del-canton-quinsaloma.webp" style="max-width:100%;height:auto"/>
+<h3>Breve reseña</h3>
+<p>Quinsaloma es el cantón más joven de la provincia. Está en el oriente, cerca de las estribaciones de la cordillera, con clima cálido y tierras fértiles para el cacao, el banano y el maíz.</p><p><b>Fecha de cantonización:</b> 15 de noviembre de 2007</p>
+<h3>Más información</h3>
+<p><b>Extensión y límites:</b> Es el cantón más pequeño de Los Ríos: unos 280 km² y cerca de 19.500 habitantes.</p><p><b>Economía y producción:</b> Se sostiene con la agricultura: cacao, banano, maíz y otros cultivos, con ganadería menor.</p><p><b>Fiestas y tradiciones:</b> El 15 de noviembre se festeja su cantonización con actos cívicos, desfiles y programas comunitarios.</p><p><b>Historia y datos curiosos:</b> Es el cantón más joven de la provincia, creado en 2007, y por eso su historia como cantón apenas va empezando.</p>
+<h3>Parroquias</h3>
+<p><b>Urbana:</b> Quinsaloma (cabecera cantonal).</p>
+<h3>Platos típicos</h3>
+<p>Seco de gallina criolla, caldo de gallina, bolones y platos tradicionales de la zona.</p><figure><img decoding="async" loading="lazy" alt="Comida típica de quinsaloma" src="img2/58-comida-tipica-de-quinsaloma.webp" style="max-width:100%;height:auto"/></figure>
+<h3>Lugares turísticos</h3>
+<ul><li><b>Ríos y cascadas.</b> Balnearios naturales en el entorno rural.</li><li><b>Fincas cacaoteras y bananeras.</b> Paisajes agrícolas con posibilidad de visita.</li></ul><div><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Cascada La Esperanza, quinsaloma" src="img2/59-cascada-la-esperanza-quinsaloma.webp" style="width:100%;height:auto"/><figcaption>Cascada La Esperanza</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Río Quinsaloma, quinsaloma" src="img2/60-rio-quinsaloma-quinsaloma.webp" style="width:100%;height:auto"/><figcaption>Río Quinsaloma</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Parque Central, quinsaloma" src="img2/61-parque-central-quinsaloma.webp" style="width:100%;height:auto"/><figcaption>Parque Central</figcaption></figure></div><p>Confirma horarios, acceso y servicios antes de visitar estos lugares.</p>
+<h3>Hoteles donde alojarse</h3>
+<p>No encontré hoteles con nombre verificado para este cantón; hay hostales y alojamientos locales pequeños. Usa el enlace para ver la lista actualizada.</p><a href="https://www.google.com/maps/search/hoteles+en+Quinsaloma+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Buscar más hoteles en Quinsaloma →</a>
+<h3>Bandera del cantón</h3>
+<figure><img decoding="async" loading="lazy" alt="Bandera del cantón Quinsaloma" src="img2/62-bandera-del-canton-quinsaloma.webp" style="max-width:100%;height:auto"/><figcaption>Bandera de Quinsaloma.</figcaption></figure>
+<h3>Datos del cantón</h3>
+<p><b>Alcalde/sa:</b> Cristhian Aldaz González</p><p><b>Población:</b> 19.470 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p>Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p>
+<h3>Mapa</h3>
+<a href="https://www.google.com/maps/search/Quinsaloma+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Ver mapa en Google Maps</a>
 
-<section class="section canton" id="quinsaloma">
-<div class="container">
-<div class="section-head"><span class="canton-label">CANTÓN DE LOS RÍOS</span><h2>Quinsaloma</h2><p>El cantón más joven</p></div>
-<figure class="photo"><img src="img/63-fotografia-del-canton-quinsaloma.webp" alt="Fotografía del cantón Quinsaloma" loading="lazy" onerror="this.parentNode.classList.add('vacia');this.remove()"><div class="vacio">Coloca aquí la foto: <code>imagenes/quinsaloma.jpg</code></div></figure>
-<div class="content-grid">
-<div>
-<article class="panel"><h2>Breve reseña</h2><p>Quinsaloma es el cantón más joven de la provincia. Está en el oriente, cerca de las estribaciones de la cordillera, con clima cálido y tierras fértiles para el cacao, el banano y el maíz.</p><p><b>Fecha de cantonización:</b> 15 de noviembre de 2007</p></article>
-<article class="panel"><h2>Más información</h2><p><b>Extensión y límites:</b> Es el cantón más pequeño de Los Ríos: unos 280 km² y cerca de 19.500 habitantes.</p><p><b>Economía y producción:</b> Se sostiene con la agricultura: cacao, banano, maíz y otros cultivos, con ganadería menor.</p><p><b>Fiestas y tradiciones:</b> El 15 de noviembre se festeja su cantonización con actos cívicos, desfiles y programas comunitarios.</p><p><b>Historia y datos curiosos:</b> Es el cantón más joven de la provincia, creado en 2007, y por eso su historia como cantón apenas va empezando.</p></article>
-<article class="panel"><h2>Parroquias</h2><p><b>Urbana:</b> Quinsaloma (cabecera cantonal).</p></article>
-<article class="panel"><h2>Platos típicos</h2><p>Seco de gallina criolla, caldo de gallina, bolones y platos tradicionales de la zona.</p><figure class="comida-foto"><img loading="lazy" decoding="async" src="img/64-comida-tipica-de-quinsaloma.webp" alt="Comida típica de quinsaloma"></figure></article>
-<article class="panel"><h2>Lugares turísticos</h2><ul class="lista"><li><b>Ríos y cascadas.</b> Balnearios naturales en el entorno rural.</li><li><b>Fincas cacaoteras y bananeras.</b> Paisajes agrícolas con posibilidad de visita.</li></ul><figure class="turismo-foto"><img loading="lazy" decoding="async" src="img/65-cascada-la-esperanza-quinsaloma.webp" alt="Cascada La Esperanza, quinsaloma"><figcaption>Cascada La Esperanza</figcaption></figure><div class="galeria-turismo"><figure><img loading="lazy" decoding="async" src="img/66-cascada-la-esperanza-quinsaloma.webp" alt="Cascada La Esperanza, quinsaloma"><figcaption>Cascada La Esperanza</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/67-rio-quinsaloma-quinsaloma.webp" alt="Río Quinsaloma, quinsaloma"><figcaption>Río Quinsaloma</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/68-parque-central-quinsaloma.webp" alt="Parque Central, quinsaloma"><figcaption>Parque Central</figcaption></figure></div><p class="note">Confirma horarios, acceso y servicios antes de visitar estos lugares.</p></article>
-<article class="panel"><h2>Hoteles donde alojarse</h2><p>No encontré hoteles con nombre verificado para este cantón; hay hostales y alojamientos locales pequeños. Usa el enlace para ver la lista actualizada.</p><a href="https://www.google.com/maps/search/hoteles+en+Quinsaloma+Los+R%C3%ADos+Ecuador" target="_blank">Buscar más hoteles en Quinsaloma →</a></article>
-</div>
-<aside>
-<article class="panel"><h2>Bandera del cantón</h2><figure class="bandera"><img loading="lazy" decoding="async" src="img/69-bandera-del-canton-quinsaloma.webp" alt="Bandera del cantón Quinsaloma"><figcaption>Bandera de Quinsaloma.</figcaption></figure></article>
-<article class="panel"><h2>Datos del cantón</h2><p><b>Alcalde/sa:</b> Cristhian Aldaz González</p><p><b>Población:</b> 19.470 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p class="note">Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p></article>
-<article class="panel"><h2>Mapa</h2><a class="btn-mapa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Quinsaloma+Los+R%C3%ADos+Ecuador">📍 Ver mapa en Google Maps</a></article>
-</aside>
-</div>
-</div>
-</section>
+</details>
+<details id="urdaneta"><summary><b>Urdaneta</b></summary>
+<p><i>Catarama y Ricaurte, puertos del río</i></p>
+<img decoding="async" loading="lazy" alt="Fotografía del cantón Urdaneta" src="img2/63-fotografia-del-canton-urdaneta.webp" style="max-width:100%;height:auto"/>
+<h3>Breve reseña</h3>
+<p>Urdaneta tiene como cabecera a Catarama. Fue un importante puerto fluvial, y esa vida de río sigue presente en su gente, su comida y sus costumbres.</p><p><b>Fecha de cantonización:</b> 11 de octubre de 1913</p>
+<h3>Más información</h3>
+<p><b>Extensión y límites:</b> Cubre aproximadamente 377 km². Su cabecera no lleva el mismo nombre que el cantón: es la población de Catarama.</p><p><b>Economía y producción:</b> Se trabaja sobre todo el arroz, el cacao, el banano y la ganadería, con intercambio comercial hacia Babahoyo.</p><p><b>Fiestas y tradiciones:</b> El 11 de octubre se recuerda su cantonización con actos cívicos, desfiles y presentaciones artísticas.</p><p><b>Historia y datos curiosos:</b> Fue cantonizado en 1913. Su dato curioso es el nombre: el cantón se llama Urdaneta, pero la ciudad principal es Catarama.</p>
+<h3>Parroquias</h3>
+<p><b>Urbana:</b> Catarama.</p><p><b>Rural:</b> Ricaurte.</p>
+<h3>Platos típicos</h3>
+<p>Bollo de pescado, caldo de salchicha, seco de gallina y platos con productos de la zona.</p><figure><img decoding="async" loading="lazy" alt="Comida típica de urdaneta" src="img2/64-comida-tipica-de-urdaneta.webp" style="max-width:100%;height:auto"/></figure>
+<h3>Lugares turísticos</h3>
+<ul><li><b>Puertos fluviales de Catarama y Ricaurte.</b> Orillas del río con tradición de transporte y pesca.</li><li><b>Parques e iglesias.</b> Centros tradicionales de ambas parroquias.</li><li><b>Paisaje agrícola.</b> Cultivos de arroz y banano.</li></ul><div><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Catarama, urdaneta" src="img2/65-catarama-urdaneta.webp" style="width:100%;height:auto"/><figcaption>Catarama</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Balnearios del Río Catarama, urdaneta" src="img2/66-balnearios-del-rio-catarama-urdaneta.webp" style="width:100%;height:auto"/><figcaption>Balnearios del Río Catarama</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Parque Central, urdaneta" src="img2/67-parque-central-urdaneta.webp" style="width:100%;height:auto"/><figcaption>Parque Central</figcaption></figure></div><p>Confirma horarios, acceso y servicios antes de visitar estos lugares.</p>
+<h3>Hoteles donde alojarse</h3>
+<p>No encontré hoteles con nombre verificado para este cantón; hay hostales y alojamientos locales pequeños. Usa el enlace para ver la lista actualizada.</p><a href="https://www.google.com/maps/search/hoteles+en+Urdaneta+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Buscar más hoteles en Urdaneta →</a>
+<h3>Bandera del cantón</h3>
+<figure><img decoding="async" loading="lazy" alt="Bandera del cantón Urdaneta" src="img2/68-bandera-del-canton-urdaneta.webp" style="max-width:100%;height:auto"/><figcaption>Bandera de Urdaneta.</figcaption></figure>
+<h3>Datos del cantón</h3>
+<p><b>Alcalde/sa:</b> Amada Argentina Zambrano Rodríguez</p><p><b>Población:</b> 33.151 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p>Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p>
+<h3>Mapa</h3>
+<a href="https://www.google.com/maps/search/Urdaneta+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Ver mapa en Google Maps</a>
 
-<section class="section canton" id="urdaneta">
-<div class="container">
-<div class="section-head"><span class="canton-label">CANTÓN DE LOS RÍOS</span><h2>Urdaneta</h2><p>Catarama y Ricaurte, puertos del río</p></div>
-<figure class="photo"><img src="img/70-fotografia-del-canton-urdaneta.webp" alt="Fotografía del cantón Urdaneta" loading="lazy" onerror="this.parentNode.classList.add('vacia');this.remove()"><div class="vacio">Coloca aquí la foto: <code>imagenes/urdaneta.jpg</code></div></figure>
-<div class="content-grid">
-<div>
-<article class="panel"><h2>Breve reseña</h2><p>Urdaneta tiene como cabecera a Catarama. Fue un importante puerto fluvial, y esa vida de río sigue presente en su gente, su comida y sus costumbres.</p><p><b>Fecha de cantonización:</b> 11 de octubre de 1913</p></article>
-<article class="panel"><h2>Más información</h2><p><b>Extensión y límites:</b> Cubre aproximadamente 377 km². Su cabecera no lleva el mismo nombre que el cantón: es la población de Catarama.</p><p><b>Economía y producción:</b> Se trabaja sobre todo el arroz, el cacao, el banano y la ganadería, con intercambio comercial hacia Babahoyo.</p><p><b>Fiestas y tradiciones:</b> El 11 de octubre se recuerda su cantonización con actos cívicos, desfiles y presentaciones artísticas.</p><p><b>Historia y datos curiosos:</b> Fue cantonizado en 1913. Su dato curioso es el nombre: el cantón se llama Urdaneta, pero la ciudad principal es Catarama.</p></article>
-<article class="panel"><h2>Parroquias</h2><p><b>Urbana:</b> Catarama.</p><p><b>Rural:</b> Ricaurte.</p></article>
-<article class="panel"><h2>Platos típicos</h2><p>Bollo de pescado, caldo de salchicha, seco de gallina y platos con productos de la zona.</p><figure class="comida-foto"><img loading="lazy" decoding="async" src="img/71-comida-tipica-de-urdaneta.webp" alt="Comida típica de urdaneta"></figure></article>
-<article class="panel"><h2>Lugares turísticos</h2><ul class="lista"><li><b>Puertos fluviales de Catarama y Ricaurte.</b> Orillas del río con tradición de transporte y pesca.</li><li><b>Parques e iglesias.</b> Centros tradicionales de ambas parroquias.</li><li><b>Paisaje agrícola.</b> Cultivos de arroz y banano.</li></ul><figure class="turismo-foto"><img loading="lazy" decoding="async" src="img/72-parque-central-urdaneta.webp" alt="Parque Central, urdaneta"><figcaption>Parque Central</figcaption></figure><div class="galeria-turismo"><figure><img loading="lazy" decoding="async" src="img/73-catarama-urdaneta.webp" alt="Catarama, urdaneta"><figcaption>Catarama</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/74-balnearios-del-rio-catarama-urdaneta.webp" alt="Balnearios del Río Catarama, urdaneta"><figcaption>Balnearios del Río Catarama</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/75-parque-central-urdaneta.webp" alt="Parque Central, urdaneta"><figcaption>Parque Central</figcaption></figure></div><p class="note">Confirma horarios, acceso y servicios antes de visitar estos lugares.</p></article>
-<article class="panel"><h2>Hoteles donde alojarse</h2><p>No encontré hoteles con nombre verificado para este cantón; hay hostales y alojamientos locales pequeños. Usa el enlace para ver la lista actualizada.</p><a href="https://www.google.com/maps/search/hoteles+en+Urdaneta+Los+R%C3%ADos+Ecuador" target="_blank">Buscar más hoteles en Urdaneta →</a></article>
-</div>
-<aside>
-<article class="panel"><h2>Bandera del cantón</h2><figure class="bandera"><img loading="lazy" decoding="async" src="img/76-bandera-del-canton-urdaneta.webp" alt="Bandera del cantón Urdaneta"><figcaption>Bandera de Urdaneta.</figcaption></figure></article>
-<article class="panel"><h2>Datos del cantón</h2><p><b>Alcalde/sa:</b> Amada Argentina Zambrano Rodríguez</p><p><b>Población:</b> 33.151 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p class="note">Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p></article>
-<article class="panel"><h2>Mapa</h2><a class="btn-mapa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Urdaneta+Los+R%C3%ADos+Ecuador">📍 Ver mapa en Google Maps</a></article>
-</aside>
-</div>
-</div>
-</section>
+</details>
+<details id="valencia"><summary><b>Valencia</b></summary>
+<p><i>Tierra de ríos cristalinos</i></p>
+<img decoding="async" loading="lazy" alt="Fotografía del cantón Valencia" src="img2/69-fotografia-del-canton-valencia.webp" style="max-width:100%;height:auto"/>
+<h3>Breve reseña</h3>
+<p>Valencia está al noreste de la provincia, en zona de transición hacia la Sierra. Su extenso territorio tiene ríos, bosques y fincas, y gran producción de cacao, banano y maíz.</p><p><b>Fecha de cantonización:</b> 13 de diciembre de 1995</p>
+<h3>Más información</h3>
+<p><b>Extensión y límites:</b> Con cerca de 980 km², es el segundo cantón más extenso de la provincia, después de Babahoyo. Está al norte, en tierras de clima cálido y mucha vegetación.</p><p><b>Economía y producción:</b> Vive de la agricultura: banano, cacao, palma africana, maíz y maracuyá, además de ganadería y producción de madera.</p><p><b>Fiestas y tradiciones:</b> El 13 de diciembre se recuerda su cantonización con actos cívicos, desfiles y programas culturales.</p><p><b>Historia y datos curiosos:</b> Fue creado como cantón en 1995, por lo que es uno de los más recientes de la provincia.</p>
+<h3>Parroquias</h3>
+<p><b>Urbana:</b> Valencia (cabecera cantonal).</p>
+<h3>Platos típicos</h3>
+<p>Comida montuvia, seco de gallina, caldo de bolas y platos preparados con productos agrícolas.</p><figure><img decoding="async" loading="lazy" alt="Comida típica de valencia" src="img2/70-comida-tipica-de-valencia.webp" style="max-width:100%;height:auto"/></figure>
+<h3>Lugares turísticos</h3>
+<ul><li><b>Ríos cristalinos y balnearios.</b> Se practican pesca deportiva, paseos en bote y caminatas.</li><li><b>Cascadas.</b> Cascadas en las zonas rurales y de bosque.</li><li><b>Fincas agrícolas.</b> Recorridos por plantaciones de la zona.</li></ul><div><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Parque Central, valencia" src="img2/71-parque-central-valencia.webp" style="width:100%;height:auto"/><figcaption>Parque Central</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Río San Pablo, valencia" src="img2/72-rio-san-pablo-valencia.webp" style="width:100%;height:auto"/><figcaption>Río San Pablo</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Balneario La Puntilla, valencia" src="img2/73-balneario-la-puntilla-valencia.webp" style="width:100%;height:auto"/><figcaption>Balneario La Puntilla</figcaption></figure></div><p>Confirma horarios, acceso y servicios antes de visitar estos lugares.</p>
+<h3>Hoteles donde alojarse</h3>
+<p>No encontré hoteles con nombre verificado para este cantón; hay hostales y alojamientos locales pequeños. Usa el enlace para ver la lista actualizada.</p><a href="https://www.google.com/maps/search/hoteles+en+Valencia+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Buscar más hoteles en Valencia →</a>
+<h3>Bandera del cantón</h3>
+<figure><img decoding="async" loading="lazy" alt="Bandera del cantón Valencia" src="img2/74-bandera-del-canton-valencia.webp" style="max-width:100%;height:auto"/><figcaption>Bandera de Valencia.</figcaption></figure>
+<h3>Datos del cantón</h3>
+<p><b>Alcalde/sa:</b> Daniel Macías López</p><p><b>Población:</b> 51.509 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p>Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p>
+<h3>Mapa</h3>
+<a href="https://www.google.com/maps/search/Valencia+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Ver mapa en Google Maps</a>
 
-<section class="section canton" id="valencia">
-<div class="container">
-<div class="section-head"><span class="canton-label">CANTÓN DE LOS RÍOS</span><h2>Valencia</h2><p>Tierra de ríos cristalinos</p></div>
-<figure class="photo"><img src="img/77-fotografia-del-canton-valencia.webp" alt="Fotografía del cantón Valencia" loading="lazy" onerror="this.parentNode.classList.add('vacia');this.remove()"><div class="vacio">Coloca aquí la foto: <code>imagenes/valencia.jpg</code></div></figure>
-<div class="content-grid">
-<div>
-<article class="panel"><h2>Breve reseña</h2><p>Valencia está al noreste de la provincia, en zona de transición hacia la Sierra. Su extenso territorio tiene ríos, bosques y fincas, y gran producción de cacao, banano y maíz.</p><p><b>Fecha de cantonización:</b> 13 de diciembre de 1995</p></article>
-<article class="panel"><h2>Más información</h2><p><b>Extensión y límites:</b> Con cerca de 980 km², es el segundo cantón más extenso de la provincia, después de Babahoyo. Está al norte, en tierras de clima cálido y mucha vegetación.</p><p><b>Economía y producción:</b> Vive de la agricultura: banano, cacao, palma africana, maíz y maracuyá, además de ganadería y producción de madera.</p><p><b>Fiestas y tradiciones:</b> El 13 de diciembre se recuerda su cantonización con actos cívicos, desfiles y programas culturales.</p><p><b>Historia y datos curiosos:</b> Fue creado como cantón en 1995, por lo que es uno de los más recientes de la provincia.</p></article>
-<article class="panel"><h2>Parroquias</h2><p><b>Urbana:</b> Valencia (cabecera cantonal).</p></article>
-<article class="panel"><h2>Platos típicos</h2><p>Comida montuvia, seco de gallina, caldo de bolas y platos preparados con productos agrícolas.</p><figure class="comida-foto"><img loading="lazy" decoding="async" src="img/78-comida-tipica-de-valencia.webp" alt="Comida típica de valencia"></figure></article>
-<article class="panel"><h2>Lugares turísticos</h2><ul class="lista"><li><b>Ríos cristalinos y balnearios.</b> Se practican pesca deportiva, paseos en bote y caminatas.</li><li><b>Cascadas.</b> Cascadas en las zonas rurales y de bosque.</li><li><b>Fincas agrícolas.</b> Recorridos por plantaciones de la zona.</li></ul><figure class="turismo-foto"><img loading="lazy" decoding="async" src="img/79-parque-central-valencia.webp" alt="Parque Central, valencia"><figcaption>Parque Central</figcaption></figure><div class="galeria-turismo"><figure><img loading="lazy" decoding="async" src="img/80-parque-central-valencia.webp" alt="Parque Central, valencia"><figcaption>Parque Central</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/81-rio-san-pablo-valencia.webp" alt="Río San Pablo, valencia"><figcaption>Río San Pablo</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/82-balneario-la-puntilla-valencia.webp" alt="Balneario La Puntilla, valencia"><figcaption>Balneario La Puntilla</figcaption></figure></div><p class="note">Confirma horarios, acceso y servicios antes de visitar estos lugares.</p></article>
-<article class="panel"><h2>Hoteles donde alojarse</h2><p>No encontré hoteles con nombre verificado para este cantón; hay hostales y alojamientos locales pequeños. Usa el enlace para ver la lista actualizada.</p><a href="https://www.google.com/maps/search/hoteles+en+Valencia+Los+R%C3%ADos+Ecuador" target="_blank">Buscar más hoteles en Valencia →</a></article>
-</div>
-<aside>
-<article class="panel"><h2>Bandera del cantón</h2><figure class="bandera"><img loading="lazy" decoding="async" src="img/83-bandera-del-canton-valencia.webp" alt="Bandera del cantón Valencia"><figcaption>Bandera de Valencia.</figcaption></figure></article>
-<article class="panel"><h2>Datos del cantón</h2><p><b>Alcalde/sa:</b> Daniel Macías López</p><p><b>Población:</b> 51.509 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p class="note">Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p></article>
-<article class="panel"><h2>Mapa</h2><a class="btn-mapa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Valencia+Los+R%C3%ADos+Ecuador">📍 Ver mapa en Google Maps</a></article>
-</aside>
-</div>
-</div>
-</section>
+</details>
+<details id="ventanas"><summary><b>Ventanas</b></summary>
+<p><i>Puerta de entrada desde la Sierra</i></p>
+<img decoding="async" loading="lazy" alt="Fotografía del cantón Ventanas" src="img2/75-fotografia-del-canton-ventanas.webp" style="max-width:100%;height:auto"/>
+<h3>Breve reseña</h3>
+<p>Ventanas es un cantón del sur de la provincia, a orillas del río Zapotal. Es un centro de comercio y de producción de banano y cacao, y conecta Los Ríos con Bolívar.</p><p><b>Fecha de cantonización:</b> 10 de noviembre de 1952</p>
+<h3>Más información</h3>
+<p><b>Extensión y límites:</b> Mide unos 288 km², uno de los cantones más pequeños de la provincia, pero con más de 70.000 habitantes.</p><p><b>Economía y producción:</b> Combina agricultura (banano, cacao, arroz y maíz) con un comercio dinámico, por ser punto de paso hacia el Guayas y la Sierra.</p><p><b>Fiestas y tradiciones:</b> El 10 de noviembre celebra su cantonización con desfiles, actos culturales y encuentros deportivos.</p><p><b>Historia y datos curiosos:</b> Fue elevado a cantón en 1952. Se ha desarrollado como una ciudad comercial y de servicios para la zona sur de la provincia.</p>
+<h3>Parroquias</h3>
+<p><b>Urbana:</b> Ventanas.</p><p><b>Rurales:</b> Zapotal, Chacarita y Los Ángeles.</p>
+<h3>Platos típicos</h3>
+<p>Arroz con menestra, caldo de salchicha, bolones y platos con pescado de río.</p><figure><img decoding="async" loading="lazy" alt="Comida típica de ventanas" src="img2/76-comida-tipica-de-ventanas.webp" style="max-width:100%;height:auto"/></figure>
+<h3>Lugares turísticos</h3>
+<ul><li><b>Malecón de Ventanas.</b> Uno de los atractivos más visitados, junto al río Zapotal.</li><li><b>Cascadas San Jacinto.</b> Cascadas en zona rural para visita de un día.</li><li><b>Haciendas históricas.</b> Grandes haciendas productoras de cacao y banano.</li></ul><div><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Río Ventanas, ventanas" src="img2/77-rio-ventanas-ventanas.webp" style="width:100%;height:auto"/><figcaption>Río Ventanas</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Balneario La Playita, ventanas" src="img2/78-balneario-la-playita-ventanas.webp" style="width:100%;height:auto"/><figcaption>Balneario La Playita</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Parque Central, ventanas" src="img2/79-parque-central-ventanas.webp" style="width:100%;height:auto"/><figcaption>Parque Central</figcaption></figure></div><p>Confirma horarios, acceso y servicios antes de visitar estos lugares.</p>
+<h3>Hoteles donde alojarse</h3>
+<ul><li>Hotel del Río Ventanas</li><li>Hotel Kalabi INN</li></ul><p>Nombres tomados de Google Maps; confirma precios, disponibilidad y calificaciones antes de reservar.</p><a href="https://www.google.com/maps/search/hoteles+en+Ventanas+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Buscar más hoteles en Ventanas →</a>
+<h3>Bandera del cantón</h3>
+<figure><img decoding="async" loading="lazy" alt="Bandera del cantón Ventanas" src="img2/80-bandera-del-canton-ventanas.webp" style="max-width:100%;height:auto"/><figcaption>Bandera de Ventanas.</figcaption></figure>
+<h3>Datos del cantón</h3>
+<p><b>Alcalde/sa:</b> Carlos Carriel Abad</p><p><b>Población:</b> 73.211 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p>Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p>
+<h3>Mapa</h3>
+<a href="https://www.google.com/maps/search/Ventanas+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Ver mapa en Google Maps</a>
 
-<section class="section canton" id="ventanas">
-<div class="container">
-<div class="section-head"><span class="canton-label">CANTÓN DE LOS RÍOS</span><h2>Ventanas</h2><p>Puerta de entrada desde la Sierra</p></div>
-<figure class="photo"><img src="img/84-fotografia-del-canton-ventanas.webp" alt="Fotografía del cantón Ventanas" loading="lazy" onerror="this.parentNode.classList.add('vacia');this.remove()"><div class="vacio">Coloca aquí la foto: <code>imagenes/ventanas.jpg</code></div></figure>
-<div class="content-grid">
-<div>
-<article class="panel"><h2>Breve reseña</h2><p>Ventanas es un cantón del sur de la provincia, a orillas del río Zapotal. Es un centro de comercio y de producción de banano y cacao, y conecta Los Ríos con Bolívar.</p><p><b>Fecha de cantonización:</b> 10 de noviembre de 1952</p></article>
-<article class="panel"><h2>Más información</h2><p><b>Extensión y límites:</b> Mide unos 288 km², uno de los cantones más pequeños de la provincia, pero con más de 70.000 habitantes.</p><p><b>Economía y producción:</b> Combina agricultura (banano, cacao, arroz y maíz) con un comercio dinámico, por ser punto de paso hacia el Guayas y la Sierra.</p><p><b>Fiestas y tradiciones:</b> El 10 de noviembre celebra su cantonización con desfiles, actos culturales y encuentros deportivos.</p><p><b>Historia y datos curiosos:</b> Fue elevado a cantón en 1952. Se ha desarrollado como una ciudad comercial y de servicios para la zona sur de la provincia.</p></article>
-<article class="panel"><h2>Parroquias</h2><p><b>Urbana:</b> Ventanas.</p><p><b>Rurales:</b> Zapotal, Chacarita y Los Ángeles.</p></article>
-<article class="panel"><h2>Platos típicos</h2><p>Arroz con menestra, caldo de salchicha, bolones y platos con pescado de río.</p><figure class="comida-foto"><img loading="lazy" decoding="async" src="img/85-comida-tipica-de-ventanas.webp" alt="Comida típica de ventanas"></figure></article>
-<article class="panel"><h2>Lugares turísticos</h2><ul class="lista"><li><b>Malecón de Ventanas.</b> Uno de los atractivos más visitados, junto al río Zapotal.</li><li><b>Cascadas San Jacinto.</b> Cascadas en zona rural para visita de un día.</li><li><b>Haciendas históricas.</b> Grandes haciendas productoras de cacao y banano.</li></ul><figure class="turismo-foto"><img loading="lazy" decoding="async" src="img/86-balneario-la-playita-ventanas.webp" alt="Balneario La Playita, ventanas"><figcaption>Balneario La Playita</figcaption></figure><div class="galeria-turismo"><figure><img loading="lazy" decoding="async" src="img/87-rio-ventanas-ventanas.webp" alt="Río Ventanas, ventanas"><figcaption>Río Ventanas</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/88-balneario-la-playita-ventanas.webp" alt="Balneario La Playita, ventanas"><figcaption>Balneario La Playita</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/89-parque-central-ventanas.webp" alt="Parque Central, ventanas"><figcaption>Parque Central</figcaption></figure></div><p class="note">Confirma horarios, acceso y servicios antes de visitar estos lugares.</p></article>
-<article class="panel"><h2>Hoteles donde alojarse</h2><ul class="lista"><li>Hotel del Río Ventanas</li><li>Hotel Kalabi INN</li></ul><p class="note">Nombres tomados de Google Maps; confirma precios, disponibilidad y calificaciones antes de reservar.</p><a href="https://www.google.com/maps/search/hoteles+en+Ventanas+Los+R%C3%ADos+Ecuador" target="_blank">Buscar más hoteles en Ventanas →</a></article>
-</div>
-<aside>
-<article class="panel"><h2>Bandera del cantón</h2><figure class="bandera"><img loading="lazy" decoding="async" src="img/90-bandera-del-canton-ventanas.webp" alt="Bandera del cantón Ventanas"><figcaption>Bandera de Ventanas.</figcaption></figure></article>
-<article class="panel"><h2>Datos del cantón</h2><p><b>Alcalde/sa:</b> Carlos Carriel Abad</p><p><b>Población:</b> 73.211 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p class="note">Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p></article>
-<article class="panel"><h2>Mapa</h2><a class="btn-mapa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Ventanas+Los+R%C3%ADos+Ecuador">📍 Ver mapa en Google Maps</a></article>
-</aside>
-</div>
-</div>
-</section>
+</details>
+<details id="vinces"><summary><b>Vinces</b></summary>
+<p><i>El París chiquito</i></p>
+<img decoding="async" loading="lazy" alt="Fotografía del cantón Vinces" src="img2/81-fotografia-del-canton-vinces.webp" style="max-width:100%;height:auto"/>
+<h3>Breve reseña</h3>
+<p>Vinces es llamado «el París chiquito» por la riqueza de la época del cacao, cuando sus familias importaron modas y arquitectura europeas. Hoy mantiene casas patrimoniales, un malecón muy visitado y el humedal Abras de Mantequilla.</p><p><b>Fecha de cantonización:</b> 14 de junio de 1845</p>
+<h3>Más información</h3>
+<p><b>Extensión y límites:</b> Tiene unos 693 km², entre los cantones más extensos. Se extiende por la parte oeste de la provincia, sobre las tierras bañadas por el río Vinces.</p><p><b>Economía y producción:</b> Su riqueza viene del campo: cacao, arroz, banano y maíz. Hace más de un siglo fue una de las zonas cacaoteras más ricas del país.</p><p><b>Fiestas y tradiciones:</b> Cada 14 de junio celebra su cantonización con desfiles, ferias, regatas y eventos culturales a orillas del río.</p><p><b>Historia y datos curiosos:</b> Fue cantonizado en 1845. Durante el auge del cacao se llenó de casonas y familias adineradas, y por eso se le llama "París Chiquito".</p>
+<h3>Parroquias</h3>
+<p><b>Urbanas:</b> Vinces y Balzar de Vinces.</p><p><b>Rural:</b> Antonio Sotomayor (Playas de Vinces).</p>
+<h3>Platos típicos</h3>
+<p>Arroz con menestra, seco de gallina, bollo de pescado y platos tradicionales montuvios.</p><figure><img decoding="async" loading="lazy" alt="Comida típica de vinces" src="img2/82-comida-tipica-de-vinces.webp" style="max-width:100%;height:auto"/></figure>
+<h3>Lugares turísticos</h3>
+<ul><li><b>Malecón de Vinces.</b> Principal paseo, concurrido de día y de noche.</li><li><b>Playas de Vinces.</b> Declarado en 1968 como primer balneario de agua dulce del país.</li><li><b>Humedal Abras de Mantequilla.</b> Sitio Ramsar de unas 22.500 hectáreas, refugio de aves y otras especies.</li><li><b>Casas patrimoniales y réplica de la Torre Eiffel.</b> Huella de la época del cacao.</li><li><b>Regata Guayaquil–Vinces.</b> Competencia de botes que se celebra cada marzo.</li></ul><div><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Malecón de Vinces, vinces" src="img2/83-malecon-de-vinces-vinces.webp" style="width:100%;height:auto"/><figcaption>Malecón de Vinces</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Río Vinces, vinces" src="img2/84-rio-vinces-vinces.webp" style="width:100%;height:auto"/><figcaption>Río Vinces</figcaption></figure><figure style="display:inline-block;width:31%;margin:0 1%;vertical-align:top"><img decoding="async" loading="lazy" alt="Parque Central, vinces" src="img2/85-parque-central-vinces.webp" style="width:100%;height:auto"/><figcaption>Parque Central</figcaption></figure></div><p>Confirma horarios, acceso y servicios antes de visitar estos lugares.</p>
+<h3>Hoteles donde alojarse</h3>
+<ul><li>Hotel Azuay</li><li>Hotel Perla Roja</li></ul><p>Nombres tomados de Google Maps; confirma precios, disponibilidad y calificaciones antes de reservar.</p><a href="https://www.google.com/maps/search/hoteles+en+Vinces+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Buscar más hoteles en Vinces →</a>
+<h3>Bandera del cantón</h3>
+<figure><img decoding="async" loading="lazy" alt="Bandera del cantón Vinces" src="img2/86-bandera-del-canton-vinces.webp" style="max-width:100%;height:auto"/><figcaption>Bandera de Vinces.</figcaption></figure>
+<h3>Datos del cantón</h3>
+<p><b>Alcalde/sa:</b> Juan Alfonso Montalván Cerezo</p><p><b>Población:</b> 80.909 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p>Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p>
+<h3>Mapa</h3>
+<a href="https://www.google.com/maps/search/Vinces+Los+R%C3%ADos+Ecuador" rel="noopener" target="_blank">Ver mapa en Google Maps</a>
 
-<section class="section canton" id="vinces">
-<div class="container">
-<div class="section-head"><span class="canton-label">CANTÓN DE LOS RÍOS</span><h2>Vinces</h2><p>El París chiquito</p></div>
-<figure class="photo"><img src="img/91-fotografia-del-canton-vinces.webp" alt="Fotografía del cantón Vinces" loading="lazy" onerror="this.parentNode.classList.add('vacia');this.remove()"><div class="vacio">Coloca aquí la foto: <code>imagenes/vinces.jpg</code></div></figure>
-<div class="content-grid">
-<div>
-<article class="panel"><h2>Breve reseña</h2><p>Vinces es llamado «el París chiquito» por la riqueza de la época del cacao, cuando sus familias importaron modas y arquitectura europeas. Hoy mantiene casas patrimoniales, un malecón muy visitado y el humedal Abras de Mantequilla.</p><p><b>Fecha de cantonización:</b> 14 de junio de 1845</p></article>
-<article class="panel"><h2>Más información</h2><p><b>Extensión y límites:</b> Tiene unos 693 km², entre los cantones más extensos. Se extiende por la parte oeste de la provincia, sobre las tierras bañadas por el río Vinces.</p><p><b>Economía y producción:</b> Su riqueza viene del campo: cacao, arroz, banano y maíz. Hace más de un siglo fue una de las zonas cacaoteras más ricas del país.</p><p><b>Fiestas y tradiciones:</b> Cada 14 de junio celebra su cantonización con desfiles, ferias, regatas y eventos culturales a orillas del río.</p><p><b>Historia y datos curiosos:</b> Fue cantonizado en 1845. Durante el auge del cacao se llenó de casonas y familias adineradas, y por eso se le llama "París Chiquito".</p></article>
-<article class="panel"><h2>Parroquias</h2><p><b>Urbanas:</b> Vinces y Balzar de Vinces.</p><p><b>Rural:</b> Antonio Sotomayor (Playas de Vinces).</p></article>
-<article class="panel"><h2>Platos típicos</h2><p>Arroz con menestra, seco de gallina, bollo de pescado y platos tradicionales montuvios.</p><figure class="comida-foto"><img loading="lazy" decoding="async" src="img/92-comida-tipica-de-vinces.webp" alt="Comida típica de vinces"></figure></article>
-<article class="panel"><h2>Lugares turísticos</h2><ul class="lista"><li><b>Malecón de Vinces.</b> Principal paseo, concurrido de día y de noche.</li><li><b>Playas de Vinces.</b> Declarado en 1968 como primer balneario de agua dulce del país.</li><li><b>Humedal Abras de Mantequilla.</b> Sitio Ramsar de unas 22.500 hectáreas, refugio de aves y otras especies.</li><li><b>Casas patrimoniales y réplica de la Torre Eiffel.</b> Huella de la época del cacao.</li><li><b>Regata Guayaquil–Vinces.</b> Competencia de botes que se celebra cada marzo.</li></ul><figure class="turismo-foto"><img loading="lazy" decoding="async" src="img/93-malecon-de-vinces-vinces.webp" alt="Malecón de Vinces, vinces"><figcaption>Malecón de Vinces</figcaption></figure><div class="galeria-turismo"><figure><img loading="lazy" decoding="async" src="img/94-malecon-de-vinces-vinces.webp" alt="Malecón de Vinces, vinces"><figcaption>Malecón de Vinces</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/95-rio-vinces-vinces.webp" alt="Río Vinces, vinces"><figcaption>Río Vinces</figcaption></figure><figure><img loading="lazy" decoding="async" src="img/96-parque-central-vinces.webp" alt="Parque Central, vinces"><figcaption>Parque Central</figcaption></figure></div><p class="note">Confirma horarios, acceso y servicios antes de visitar estos lugares.</p></article>
-<article class="panel"><h2>Hoteles donde alojarse</h2><ul class="lista"><li>Hotel Azuay</li><li>Hotel Perla Roja</li></ul><p class="note">Nombres tomados de Google Maps; confirma precios, disponibilidad y calificaciones antes de reservar.</p><a href="https://www.google.com/maps/search/hoteles+en+Vinces+Los+R%C3%ADos+Ecuador" target="_blank">Buscar más hoteles en Vinces →</a></article>
-</div>
-<aside>
-<article class="panel"><h2>Bandera del cantón</h2><figure class="bandera"><img loading="lazy" decoding="async" src="img/97-bandera-del-canton-vinces.webp" alt="Bandera del cantón Vinces"><figcaption>Bandera de Vinces.</figcaption></figure></article>
-<article class="panel"><h2>Datos del cantón</h2><p><b>Alcalde/sa:</b> Juan Alfonso Montalván Cerezo</p><p><b>Población:</b> 80.909 habitantes (Censo 2022).</p><p><b>Provincia:</b> Los Ríos.</p><p class="note">Período municipal 2023–2027. Verifica posibles cambios o encargos en el GAD municipal.</p></article>
-<article class="panel"><h2>Mapa</h2><a class="btn-mapa" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Vinces+Los+R%C3%ADos+Ecuador">📍 Ver mapa en Google Maps</a></article>
-</aside>
-</div>
-</div>
-</section>
-
-
-</div>
-
-<div class="modal" id="modal" aria-hidden="true">
-<div class="modal-fondo" data-cerrar></div>
-<div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
-<div class="modal-barra"><button class="mb" id="m-ant" aria-label="Cantón anterior">‹</button><span id="modal-titulo">Cantón</span><button class="mb" id="m-sig" aria-label="Cantón siguiente">›</button><button class="mb cerrar" data-cerrar aria-label="Cerrar">✕</button></div>
-<div class="modal-cuerpo" id="modal-cuerpo"></div>
-</div></div>
-<footer><p><b>LOS RÍOS · TIERRA DE RÍOS Y TRADICIONES</b></p><p>Proyecto académico con fines educativos. Autoridades: períodos 2023–2027; verifica cambios antes de entregar.</p><p>Fuentes de consulta: <a href="https://www.losrios.gob.ec/" target="_blank">Prefectura de Los Ríos</a> · <a href="https://www.censoecuador.gob.ec/" target="_blank">INEC</a> · <a href="https://ame.gob.ec/" target="_blank">AME</a></p></footer>
-<script>
-(function(){
-var ids=[].map.call(document.querySelectorAll('#fichas section.canton'),function(s){return s.id});
-var modal=document.getElementById('modal'),cuerpo=document.getElementById('modal-cuerpo'),tit=document.getElementById('modal-titulo'),actual=-1,previo=null;
-function abrir(id){
-  var i=ids.indexOf(id); if(i<0) return;
-  var s=document.getElementById(id);
-  cuerpo.innerHTML=s.querySelector('.container').innerHTML;
-  tit.textContent=s.querySelector('h2').textContent;
-  actual=i; cuerpo.scrollTop=0;
-  if(!modal.classList.contains('abierto')){previo=document.activeElement;document.body.classList.add('sin-scroll');}
-  modal.classList.add('abierto'); modal.setAttribute('aria-hidden','false');
-  try{history.replaceState(null,'','#'+id)}catch(e){}
-}
-function cerrar(){
-  modal.classList.remove('abierto'); modal.setAttribute('aria-hidden','true');
-  document.body.classList.remove('sin-scroll'); cuerpo.innerHTML=''; actual=-1;
-  try{history.replaceState(null,'','#cantones')}catch(e){}
-  if(previo&&previo.focus) previo.focus();
-}
-document.addEventListener('click',function(e){
-  var a=e.target.closest('a[href^="#"]');
-  if(a){var id=a.getAttribute('href').slice(1); if(ids.indexOf(id)>-1){e.preventDefault();abrir(id);return;}}
-  if(e.target.closest('[data-cerrar]')) cerrar();
-});
-document.getElementById('m-ant').onclick=function(){abrir(ids[(actual+ids.length-1)%ids.length])};
-document.getElementById('m-sig').onclick=function(){abrir(ids[(actual+1)%ids.length])};
-document.addEventListener('keydown',function(e){
-  if(actual<0) return;
-  if(e.key==='Escape') cerrar();
-  if(e.key==='ArrowLeft') document.getElementById('m-ant').click();
-  if(e.key==='ArrowRight') document.getElementById('m-sig').click();
-});
-if(ids.indexOf(location.hash.slice(1))>-1) abrir(location.hash.slice(1));
-})();
-</script>
-</body></html>
+</details><script>document.querySelectorAll('details').forEach(function(d){d.addEventListener('toggle',function(){if(d.open){document.querySelectorAll('details').forEach(function(o){if(o!==d)o.open=false});}})});</script></body>
+</html>
